@@ -25,7 +25,18 @@ export function WordCard({ word }: { word: Word }) {
         danger ? 'border-red-600' : 'border-navy'
       } ${expanded ? 'shadow-cardLg' : 'shadow-card'} transition-shadow`}
     >
-      <button onClick={() => setExpanded((e) => !e)} className="w-full text-left p-4">
+      <div
+        role="button"
+        tabIndex={0}
+        onClick={() => setExpanded((e) => !e)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault()
+            setExpanded((x) => !x)
+          }
+        }}
+        className="w-full cursor-pointer text-left p-4"
+      >
         <div className="text-[9px] font-bold tracking-wider text-gray-500 uppercase">
           {word.category}
         </div>
@@ -35,9 +46,17 @@ export function WordCard({ word }: { word: Word }) {
           <StarRating value={stars} />
           <Badge tone={freqTone[word.testFrequency]}>{word.testFrequency.toUpperCase()}</Badge>
         </div>
-      </button>
+      </div>
       {expanded && (
         <div className="border-t border-gray-100">
+          {word.imageUrl && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={word.imageUrl}
+              alt={word.word}
+              className="h-32 w-full object-cover"
+            />
+          )}
           <div className="p-4 border-b border-gray-100">
             <div className="text-[10px] font-semibold tracking-wide text-gray-500">DEFINITION</div>
             <p className="text-sm text-gray-700">{word.definition}</p>

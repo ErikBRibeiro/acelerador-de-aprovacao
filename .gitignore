@@ -5,6 +5,7 @@
 build.log
 dev.log
 *.png
+.playwright-mcp/
 
 # Dependencies
 node_modules/
