@@ -2,6 +2,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { StudentProgress } from '@/lib/types'
+import { seedProgress } from '@/lib/seed'
 
 type Profile = 'student' | 'teacher' | null
 
@@ -12,6 +13,7 @@ interface AppState {
   setProfile: (p: Profile) => void
   setStars: (wordId: string, stars: 1 | 2 | 3 | 4 | 5) => void
   toggleDay: (day: number) => void
+  seedIfEmpty: () => void
   reset: () => void
 }
 
@@ -38,6 +40,10 @@ export const useAppStore = create<AppState>()(
         set((s) => ({
           scheduleDone: { ...s.scheduleDone, [day]: !s.scheduleDone[day] },
         })),
+      seedIfEmpty: () =>
+        set((s) =>
+          Object.keys(s.progress).length === 0 ? { progress: seedProgress() } : {},
+        ),
       reset: () => set({ progress: {}, scheduleDone: {} }),
     }),
     { name: 'acelerador-state' },

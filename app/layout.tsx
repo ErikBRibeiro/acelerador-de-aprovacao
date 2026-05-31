@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { SeedProgress } from '@/components/SeedProgress'
 
 export const metadata: Metadata = {
   title: 'Acelerador de Aprovação',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <SeedProgress />
+        {children}
+      </body>
     </html>
   )
 }
