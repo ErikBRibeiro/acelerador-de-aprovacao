@@ -1,6 +1,11 @@
 # Superpowers brainstorm artifacts
 .superpowers/
 
+# Local scratch
+build.log
+dev.log
+*.png
+
 # Dependencies
 node_modules/
 /.pnp

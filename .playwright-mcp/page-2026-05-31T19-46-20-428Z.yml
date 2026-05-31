@@ -1,0 +1,96 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary [ref=e3]:
+      - link "ELITE Accelerator" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: ELITE
+        - generic [ref=e6]: Accelerator
+      - navigation [ref=e7]:
+        - link "📊 Dashboard" [ref=e8] [cursor=pointer]:
+          - /url: /teacher
+        - link "📖 Glossary" [ref=e9] [cursor=pointer]:
+          - /url: /teacher/glossary
+      - generic [ref=e10]:
+        - generic [ref=e11]: Teacher
+        - generic [ref=e12]: Prof. Ana
+      - link "�っ Switch profile" [ref=e13] [cursor=pointer]:
+        - /url: /select
+    - main [ref=e14]:
+      - generic [ref=e15]:
+        - heading "Class Overview" [level=1] [ref=e16]
+        - generic [ref=e17]:
+          - generic [ref=e18]:
+            - generic [ref=e19]: STUDENTS
+            - generic [ref=e20]: "5"
+          - generic [ref=e21]:
+            - generic [ref=e22]: AVG GLOSSARY
+            - generic [ref=e23]: 62%
+          - generic [ref=e24]:
+            - generic [ref=e25]: AVG STARS
+            - generic [ref=e26]: "3.6"
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - generic [ref=e29]: STUDENT
+            - generic [ref=e30]: GLOSSARY
+            - generic [ref=e31]: AVG STARS
+            - generic [ref=e32]: LAST ACTIVE
+          - generic [ref=e33]:
+            - generic [ref=e34]: Maria Silva
+            - generic [ref=e35]: 64%
+            - generic [ref=e37]:
+              - button "1 stars" [disabled] [ref=e38]: ★
+              - button "2 stars" [disabled] [ref=e39]: ★
+              - button "3 stars" [disabled] [ref=e40]: ★
+              - button "4 stars" [disabled] [ref=e41]: ★
+              - button "5 stars" [disabled] [ref=e42]: ☆
+            - generic [ref=e43]: 31/05/2026
+          - generic [ref=e44]:
+            - generic [ref=e45]: João Oliveira
+            - generic [ref=e46]: 28%
+            - generic [ref=e48]:
+              - button "1 stars" [disabled] [ref=e49]: ★
+              - button "2 stars" [disabled] [ref=e50]: ★
+              - button "3 stars" [disabled] [ref=e51]: ☆
+              - button "4 stars" [disabled] [ref=e52]: ☆
+              - button "5 stars" [disabled] [ref=e53]: ☆
+            - generic [ref=e54]: 28/05/2026
+          - generic [ref=e55]:
+            - generic [ref=e56]: Ana Costa
+            - generic [ref=e57]: 91%
+            - generic [ref=e59]:
+              - button "1 stars" [disabled] [ref=e60]: ★
+              - button "2 stars" [disabled] [ref=e61]: ★
+              - button "3 stars" [disabled] [ref=e62]: ★
+              - button "4 stars" [disabled] [ref=e63]: ★
+              - button "5 stars" [disabled] [ref=e64]: ★
+            - generic [ref=e65]: 31/05/2026
+          - generic [ref=e66]:
+            - generic [ref=e67]: Pedro Santos
+            - generic [ref=e68]: 50%
+            - generic [ref=e70]:
+              - button "1 stars" [disabled] [ref=e71]: ★
+              - button "2 stars" [disabled] [ref=e72]: ★
+              - button "3 stars" [disabled] [ref=e73]: ★
+              - button "4 stars" [disabled] [ref=e74]: ☆
+              - button "5 stars" [disabled] [ref=e75]: ☆
+            - generic [ref=e76]: 30/05/2026
+          - generic [ref=e77]:
+            - generic [ref=e78]: Carla Mendes
+            - generic [ref=e79]: 76%
+            - generic [ref=e81]:
+              - button "1 stars" [disabled] [ref=e82]: ★
+              - button "2 stars" [disabled] [ref=e83]: ★
+              - button "3 stars" [disabled] [ref=e84]: ★
+              - button "4 stars" [disabled] [ref=e85]: ★
+              - button "5 stars" [disabled] [ref=e86]: ☆
+            - generic [ref=e87]: 29/05/2026
+        - generic [ref=e88]:
+          - generic [ref=e89]: Words with highest difficulty (false cognates)
+          - generic [ref=e90]:
+            - generic [ref=e91]: prescription
+            - generic [ref=e92]: complaint
+            - generic [ref=e93]: escalate
+            - generic [ref=e94]: balance
+            - generic [ref=e95]: interest
+            - generic [ref=e96]: deductible
+  - alert [ref=e97]

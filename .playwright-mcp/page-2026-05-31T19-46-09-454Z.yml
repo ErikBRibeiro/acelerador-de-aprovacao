@@ -1,0 +1,631 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - link "ELITE Accelerator" [ref=e4] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e5]: ELITE
+      - generic [ref=e6]: Accelerator
+    - navigation [ref=e7]:
+      - link "📊 Dashboard" [ref=e8] [cursor=pointer]:
+        - /url: /student
+      - link "📚 Study" [ref=e9] [cursor=pointer]:
+        - /url: /student/study
+      - link "📅 Schedule" [ref=e10] [cursor=pointer]:
+        - /url: /student/schedule
+    - generic [ref=e11]:
+      - generic [ref=e12]: Student
+      - generic [ref=e13]: Maria Silva
+    - link "�っ Switch profile" [ref=e14] [cursor=pointer]:
+      - /url: /select
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - heading "Study Words" [level=1] [ref=e17]
+      - textbox "Search words…" [ref=e18]
+      - generic [ref=e20]:
+        - button "All" [ref=e21] [cursor=pointer]
+        - button "Basics" [ref=e22] [cursor=pointer]
+        - button "Medical & Clinics" [ref=e23] [cursor=pointer]
+        - button "Customer Service" [ref=e24] [cursor=pointer]
+        - button "Banking" [ref=e25] [cursor=pointer]
+        - button "Emergency & 911" [ref=e26] [cursor=pointer]
+        - button "Insurance" [ref=e27] [cursor=pointer]
+      - generic [ref=e28]:
+        - button "Basics appointment compromisso / consulta 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: Basics
+          - generic [ref=e32]: appointment
+          - generic [ref=e33]: compromisso / consulta
+          - generic [ref=e34]:
+            - generic [ref=e35]:
+              - button "1 stars" [disabled] [ref=e36]: ☆
+              - button "2 stars" [disabled] [ref=e37]: ☆
+              - button "3 stars" [disabled] [ref=e38]: ☆
+              - button "4 stars" [disabled] [ref=e39]: ☆
+              - button "5 stars" [disabled] [ref=e40]: ☆
+            - generic [ref=e41]: HIGH
+        - button "Basics deadline prazo 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: Basics
+          - generic [ref=e45]: deadline
+          - generic [ref=e46]: prazo
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - button "1 stars" [disabled] [ref=e49]: ☆
+              - button "2 stars" [disabled] [ref=e50]: ☆
+              - button "3 stars" [disabled] [ref=e51]: ☆
+              - button "4 stars" [disabled] [ref=e52]: ☆
+              - button "5 stars" [disabled] [ref=e53]: ☆
+            - generic [ref=e54]: MEDIUM
+        - button "Basics available disponível 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e56] [cursor=pointer]:
+          - generic [ref=e57]: Basics
+          - generic [ref=e58]: available
+          - generic [ref=e59]: disponível
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - button "1 stars" [disabled] [ref=e62]: ☆
+              - button "2 stars" [disabled] [ref=e63]: ☆
+              - button "3 stars" [disabled] [ref=e64]: ☆
+              - button "4 stars" [disabled] [ref=e65]: ☆
+              - button "5 stars" [disabled] [ref=e66]: ☆
+            - generic [ref=e67]: HIGH
+        - button "Basics schedule agenda / agendar 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e69] [cursor=pointer]:
+          - generic [ref=e70]: Basics
+          - generic [ref=e71]: schedule
+          - generic [ref=e72]: agenda / agendar
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - button "1 stars" [disabled] [ref=e75]: ☆
+              - button "2 stars" [disabled] [ref=e76]: ☆
+              - button "3 stars" [disabled] [ref=e77]: ☆
+              - button "4 stars" [disabled] [ref=e78]: ☆
+              - button "5 stars" [disabled] [ref=e79]: ☆
+            - generic [ref=e80]: HIGH
+        - button "Basics agreement acordo 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e82] [cursor=pointer]:
+          - generic [ref=e83]: Basics
+          - generic [ref=e84]: agreement
+          - generic [ref=e85]: acordo
+          - generic [ref=e86]:
+            - generic [ref=e87]:
+              - button "1 stars" [disabled] [ref=e88]: ☆
+              - button "2 stars" [disabled] [ref=e89]: ☆
+              - button "3 stars" [disabled] [ref=e90]: ☆
+              - button "4 stars" [disabled] [ref=e91]: ☆
+              - button "5 stars" [disabled] [ref=e92]: ☆
+            - generic [ref=e93]: MEDIUM
+        - button "Basics request solicitação / solicitar 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e95] [cursor=pointer]:
+          - generic [ref=e96]: Basics
+          - generic [ref=e97]: request
+          - generic [ref=e98]: solicitação / solicitar
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - button "1 stars" [disabled] [ref=e101]: ☆
+              - button "2 stars" [disabled] [ref=e102]: ☆
+              - button "3 stars" [disabled] [ref=e103]: ☆
+              - button "4 stars" [disabled] [ref=e104]: ☆
+              - button "5 stars" [disabled] [ref=e105]: ☆
+            - generic [ref=e106]: MEDIUM
+        - button "Basics statement declaração 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e108] [cursor=pointer]:
+          - generic [ref=e109]: Basics
+          - generic [ref=e110]: statement
+          - generic [ref=e111]: declaração
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - button "1 stars" [disabled] [ref=e114]: ☆
+              - button "2 stars" [disabled] [ref=e115]: ☆
+              - button "3 stars" [disabled] [ref=e116]: ☆
+              - button "4 stars" [disabled] [ref=e117]: ☆
+              - button "5 stars" [disabled] [ref=e118]: ☆
+            - generic [ref=e119]: MEDIUM
+        - button "Basics confirm confirmar 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e121] [cursor=pointer]:
+          - generic [ref=e122]: Basics
+          - generic [ref=e123]: confirm
+          - generic [ref=e124]: confirmar
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - button "1 stars" [disabled] [ref=e127]: ☆
+              - button "2 stars" [disabled] [ref=e128]: ☆
+              - button "3 stars" [disabled] [ref=e129]: ☆
+              - button "4 stars" [disabled] [ref=e130]: ☆
+              - button "5 stars" [disabled] [ref=e131]: ☆
+            - generic [ref=e132]: HIGH
+        - button "Medical & Clinics prescription receita médica 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e134] [cursor=pointer]:
+          - generic [ref=e135]: Medical & Clinics
+          - generic [ref=e136]: prescription
+          - generic [ref=e137]: receita médica
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - button "1 stars" [disabled] [ref=e140]: ☆
+              - button "2 stars" [disabled] [ref=e141]: ☆
+              - button "3 stars" [disabled] [ref=e142]: ☆
+              - button "4 stars" [disabled] [ref=e143]: ☆
+              - button "5 stars" [disabled] [ref=e144]: ☆
+            - generic [ref=e145]: HIGH
+        - button "Medical & Clinics symptom sintoma 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e147] [cursor=pointer]:
+          - generic [ref=e148]: Medical & Clinics
+          - generic [ref=e149]: symptom
+          - generic [ref=e150]: sintoma
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - button "1 stars" [disabled] [ref=e153]: ☆
+              - button "2 stars" [disabled] [ref=e154]: ☆
+              - button "3 stars" [disabled] [ref=e155]: ☆
+              - button "4 stars" [disabled] [ref=e156]: ☆
+              - button "5 stars" [disabled] [ref=e157]: ☆
+            - generic [ref=e158]: HIGH
+        - button "Medical & Clinics diagnosis diagnóstico 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e160] [cursor=pointer]:
+          - generic [ref=e161]: Medical & Clinics
+          - generic [ref=e162]: diagnosis
+          - generic [ref=e163]: diagnóstico
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - button "1 stars" [disabled] [ref=e166]: ☆
+              - button "2 stars" [disabled] [ref=e167]: ☆
+              - button "3 stars" [disabled] [ref=e168]: ☆
+              - button "4 stars" [disabled] [ref=e169]: ☆
+              - button "5 stars" [disabled] [ref=e170]: ☆
+            - generic [ref=e171]: HIGH
+        - button "Medical & Clinics dosage dosagem 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e173] [cursor=pointer]:
+          - generic [ref=e174]: Medical & Clinics
+          - generic [ref=e175]: dosage
+          - generic [ref=e176]: dosagem
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - button "1 stars" [disabled] [ref=e179]: ☆
+              - button "2 stars" [disabled] [ref=e180]: ☆
+              - button "3 stars" [disabled] [ref=e181]: ☆
+              - button "4 stars" [disabled] [ref=e182]: ☆
+              - button "5 stars" [disabled] [ref=e183]: ☆
+            - generic [ref=e184]: MEDIUM
+        - button "Medical & Clinics swelling inchaço 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e186] [cursor=pointer]:
+          - generic [ref=e187]: Medical & Clinics
+          - generic [ref=e188]: swelling
+          - generic [ref=e189]: inchaço
+          - generic [ref=e190]:
+            - generic [ref=e191]:
+              - button "1 stars" [disabled] [ref=e192]: ☆
+              - button "2 stars" [disabled] [ref=e193]: ☆
+              - button "3 stars" [disabled] [ref=e194]: ☆
+              - button "4 stars" [disabled] [ref=e195]: ☆
+              - button "5 stars" [disabled] [ref=e196]: ☆
+            - generic [ref=e197]: MEDIUM
+        - button "Medical & Clinics rash erupção cutânea 1 stars 2 stars 3 stars 4 stars 5 stars LOW" [ref=e199] [cursor=pointer]:
+          - generic [ref=e200]: Medical & Clinics
+          - generic [ref=e201]: rash
+          - generic [ref=e202]: erupção cutânea
+          - generic [ref=e203]:
+            - generic [ref=e204]:
+              - button "1 stars" [disabled] [ref=e205]: ☆
+              - button "2 stars" [disabled] [ref=e206]: ☆
+              - button "3 stars" [disabled] [ref=e207]: ☆
+              - button "4 stars" [disabled] [ref=e208]: ☆
+              - button "5 stars" [disabled] [ref=e209]: ☆
+            - generic [ref=e210]: LOW
+        - button "Medical & Clinics dizziness tontura 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e212] [cursor=pointer]:
+          - generic [ref=e213]: Medical & Clinics
+          - generic [ref=e214]: dizziness
+          - generic [ref=e215]: tontura
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - button "1 stars" [disabled] [ref=e218]: ☆
+              - button "2 stars" [disabled] [ref=e219]: ☆
+              - button "3 stars" [disabled] [ref=e220]: ☆
+              - button "4 stars" [disabled] [ref=e221]: ☆
+              - button "5 stars" [disabled] [ref=e222]: ☆
+            - generic [ref=e223]: MEDIUM
+        - button "Medical & Clinics pregnancy gravidez 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e225] [cursor=pointer]:
+          - generic [ref=e226]: Medical & Clinics
+          - generic [ref=e227]: pregnancy
+          - generic [ref=e228]: gravidez
+          - generic [ref=e229]:
+            - generic [ref=e230]:
+              - button "1 stars" [disabled] [ref=e231]: ☆
+              - button "2 stars" [disabled] [ref=e232]: ☆
+              - button "3 stars" [disabled] [ref=e233]: ☆
+              - button "4 stars" [disabled] [ref=e234]: ☆
+              - button "5 stars" [disabled] [ref=e235]: ☆
+            - generic [ref=e236]: MEDIUM
+        - button "Medical & Clinics referral encaminhamento 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e238] [cursor=pointer]:
+          - generic [ref=e239]: Medical & Clinics
+          - generic [ref=e240]: referral
+          - generic [ref=e241]: encaminhamento
+          - generic [ref=e242]:
+            - generic [ref=e243]:
+              - button "1 stars" [disabled] [ref=e244]: ☆
+              - button "2 stars" [disabled] [ref=e245]: ☆
+              - button "3 stars" [disabled] [ref=e246]: ☆
+              - button "4 stars" [disabled] [ref=e247]: ☆
+              - button "5 stars" [disabled] [ref=e248]: ☆
+            - generic [ref=e249]: MEDIUM
+        - button "Customer Service complaint reclamação 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e251] [cursor=pointer]:
+          - generic [ref=e252]: Customer Service
+          - generic [ref=e253]: complaint
+          - generic [ref=e254]: reclamação
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - button "1 stars" [disabled] [ref=e257]: ☆
+              - button "2 stars" [disabled] [ref=e258]: ☆
+              - button "3 stars" [disabled] [ref=e259]: ☆
+              - button "4 stars" [disabled] [ref=e260]: ☆
+              - button "5 stars" [disabled] [ref=e261]: ☆
+            - generic [ref=e262]: HIGH
+        - button "Customer Service refund reembolso 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e264] [cursor=pointer]:
+          - generic [ref=e265]: Customer Service
+          - generic [ref=e266]: refund
+          - generic [ref=e267]: reembolso
+          - generic [ref=e268]:
+            - generic [ref=e269]:
+              - button "1 stars" [disabled] [ref=e270]: ☆
+              - button "2 stars" [disabled] [ref=e271]: ☆
+              - button "3 stars" [disabled] [ref=e272]: ☆
+              - button "4 stars" [disabled] [ref=e273]: ☆
+              - button "5 stars" [disabled] [ref=e274]: ☆
+            - generic [ref=e275]: HIGH
+        - button "Customer Service inquiry consulta / dúvida 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e277] [cursor=pointer]:
+          - generic [ref=e278]: Customer Service
+          - generic [ref=e279]: inquiry
+          - generic [ref=e280]: consulta / dúvida
+          - generic [ref=e281]:
+            - generic [ref=e282]:
+              - button "1 stars" [disabled] [ref=e283]: ☆
+              - button "2 stars" [disabled] [ref=e284]: ☆
+              - button "3 stars" [disabled] [ref=e285]: ☆
+              - button "4 stars" [disabled] [ref=e286]: ☆
+              - button "5 stars" [disabled] [ref=e287]: ☆
+            - generic [ref=e288]: MEDIUM
+        - button "Customer Service feedback retorno / opinião 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e290] [cursor=pointer]:
+          - generic [ref=e291]: Customer Service
+          - generic [ref=e292]: feedback
+          - generic [ref=e293]: retorno / opinião
+          - generic [ref=e294]:
+            - generic [ref=e295]:
+              - button "1 stars" [disabled] [ref=e296]: ☆
+              - button "2 stars" [disabled] [ref=e297]: ☆
+              - button "3 stars" [disabled] [ref=e298]: ☆
+              - button "4 stars" [disabled] [ref=e299]: ☆
+              - button "5 stars" [disabled] [ref=e300]: ☆
+            - generic [ref=e301]: MEDIUM
+        - button "Customer Service account conta 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e303] [cursor=pointer]:
+          - generic [ref=e304]: Customer Service
+          - generic [ref=e305]: account
+          - generic [ref=e306]: conta
+          - generic [ref=e307]:
+            - generic [ref=e308]:
+              - button "1 stars" [disabled] [ref=e309]: ☆
+              - button "2 stars" [disabled] [ref=e310]: ☆
+              - button "3 stars" [disabled] [ref=e311]: ☆
+              - button "4 stars" [disabled] [ref=e312]: ☆
+              - button "5 stars" [disabled] [ref=e313]: ☆
+            - generic [ref=e314]: HIGH
+        - button "Customer Service invoice fatura 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e316] [cursor=pointer]:
+          - generic [ref=e317]: Customer Service
+          - generic [ref=e318]: invoice
+          - generic [ref=e319]: fatura
+          - generic [ref=e320]:
+            - generic [ref=e321]:
+              - button "1 stars" [disabled] [ref=e322]: ☆
+              - button "2 stars" [disabled] [ref=e323]: ☆
+              - button "3 stars" [disabled] [ref=e324]: ☆
+              - button "4 stars" [disabled] [ref=e325]: ☆
+              - button "5 stars" [disabled] [ref=e326]: ☆
+            - generic [ref=e327]: MEDIUM
+        - button "Customer Service follow-up acompanhamento 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e329] [cursor=pointer]:
+          - generic [ref=e330]: Customer Service
+          - generic [ref=e331]: follow-up
+          - generic [ref=e332]: acompanhamento
+          - generic [ref=e333]:
+            - generic [ref=e334]:
+              - button "1 stars" [disabled] [ref=e335]: ☆
+              - button "2 stars" [disabled] [ref=e336]: ☆
+              - button "3 stars" [disabled] [ref=e337]: ☆
+              - button "4 stars" [disabled] [ref=e338]: ☆
+              - button "5 stars" [disabled] [ref=e339]: ☆
+            - generic [ref=e340]: MEDIUM
+        - button "Customer Service escalate escalar / encaminhar 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e342] [cursor=pointer]:
+          - generic [ref=e343]: Customer Service
+          - generic [ref=e344]: escalate
+          - generic [ref=e345]: escalar / encaminhar
+          - generic [ref=e346]:
+            - generic [ref=e347]:
+              - button "1 stars" [disabled] [ref=e348]: ☆
+              - button "2 stars" [disabled] [ref=e349]: ☆
+              - button "3 stars" [disabled] [ref=e350]: ☆
+              - button "4 stars" [disabled] [ref=e351]: ☆
+              - button "5 stars" [disabled] [ref=e352]: ☆
+            - generic [ref=e353]: MEDIUM
+        - button "Banking overdraft cheque especial 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e355] [cursor=pointer]:
+          - generic [ref=e356]: Banking
+          - generic [ref=e357]: overdraft
+          - generic [ref=e358]: cheque especial
+          - generic [ref=e359]:
+            - generic [ref=e360]:
+              - button "1 stars" [disabled] [ref=e361]: ☆
+              - button "2 stars" [disabled] [ref=e362]: ☆
+              - button "3 stars" [disabled] [ref=e363]: ☆
+              - button "4 stars" [disabled] [ref=e364]: ☆
+              - button "5 stars" [disabled] [ref=e365]: ☆
+            - generic [ref=e366]: MEDIUM
+        - button "Banking deposit depósito 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e368] [cursor=pointer]:
+          - generic [ref=e369]: Banking
+          - generic [ref=e370]: deposit
+          - generic [ref=e371]: depósito
+          - generic [ref=e372]:
+            - generic [ref=e373]:
+              - button "1 stars" [disabled] [ref=e374]: ☆
+              - button "2 stars" [disabled] [ref=e375]: ☆
+              - button "3 stars" [disabled] [ref=e376]: ☆
+              - button "4 stars" [disabled] [ref=e377]: ☆
+              - button "5 stars" [disabled] [ref=e378]: ☆
+            - generic [ref=e379]: HIGH
+        - button "Banking withdrawal saque 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e381] [cursor=pointer]:
+          - generic [ref=e382]: Banking
+          - generic [ref=e383]: withdrawal
+          - generic [ref=e384]: saque
+          - generic [ref=e385]:
+            - generic [ref=e386]:
+              - button "1 stars" [disabled] [ref=e387]: ☆
+              - button "2 stars" [disabled] [ref=e388]: ☆
+              - button "3 stars" [disabled] [ref=e389]: ☆
+              - button "4 stars" [disabled] [ref=e390]: ☆
+              - button "5 stars" [disabled] [ref=e391]: ☆
+            - generic [ref=e392]: HIGH
+        - button "Banking balance saldo 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e394] [cursor=pointer]:
+          - generic [ref=e395]: Banking
+          - generic [ref=e396]: balance
+          - generic [ref=e397]: saldo
+          - generic [ref=e398]:
+            - generic [ref=e399]:
+              - button "1 stars" [disabled] [ref=e400]: ☆
+              - button "2 stars" [disabled] [ref=e401]: ☆
+              - button "3 stars" [disabled] [ref=e402]: ☆
+              - button "4 stars" [disabled] [ref=e403]: ☆
+              - button "5 stars" [disabled] [ref=e404]: ☆
+            - generic [ref=e405]: HIGH
+        - button "Banking loan empréstimo 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e407] [cursor=pointer]:
+          - generic [ref=e408]: Banking
+          - generic [ref=e409]: loan
+          - generic [ref=e410]: empréstimo
+          - generic [ref=e411]:
+            - generic [ref=e412]:
+              - button "1 stars" [disabled] [ref=e413]: ☆
+              - button "2 stars" [disabled] [ref=e414]: ☆
+              - button "3 stars" [disabled] [ref=e415]: ☆
+              - button "4 stars" [disabled] [ref=e416]: ☆
+              - button "5 stars" [disabled] [ref=e417]: ☆
+            - generic [ref=e418]: HIGH
+        - button "Banking interest juros 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e420] [cursor=pointer]:
+          - generic [ref=e421]: Banking
+          - generic [ref=e422]: interest
+          - generic [ref=e423]: juros
+          - generic [ref=e424]:
+            - generic [ref=e425]:
+              - button "1 stars" [disabled] [ref=e426]: ☆
+              - button "2 stars" [disabled] [ref=e427]: ☆
+              - button "3 stars" [disabled] [ref=e428]: ☆
+              - button "4 stars" [disabled] [ref=e429]: ☆
+              - button "5 stars" [disabled] [ref=e430]: ☆
+            - generic [ref=e431]: HIGH
+        - button "Banking mortgage hipoteca / financiamento 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e433] [cursor=pointer]:
+          - generic [ref=e434]: Banking
+          - generic [ref=e435]: mortgage
+          - generic [ref=e436]: hipoteca / financiamento
+          - generic [ref=e437]:
+            - generic [ref=e438]:
+              - button "1 stars" [disabled] [ref=e439]: ☆
+              - button "2 stars" [disabled] [ref=e440]: ☆
+              - button "3 stars" [disabled] [ref=e441]: ☆
+              - button "4 stars" [disabled] [ref=e442]: ☆
+              - button "5 stars" [disabled] [ref=e443]: ☆
+            - generic [ref=e444]: MEDIUM
+        - button "Banking transfer transferência 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e446] [cursor=pointer]:
+          - generic [ref=e447]: Banking
+          - generic [ref=e448]: transfer
+          - generic [ref=e449]: transferência
+          - generic [ref=e450]:
+            - generic [ref=e451]:
+              - button "1 stars" [disabled] [ref=e452]: ☆
+              - button "2 stars" [disabled] [ref=e453]: ☆
+              - button "3 stars" [disabled] [ref=e454]: ☆
+              - button "4 stars" [disabled] [ref=e455]: ☆
+              - button "5 stars" [disabled] [ref=e456]: ☆
+            - generic [ref=e457]: HIGH
+        - button "Emergency & 911 ambulance ambulância 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e459] [cursor=pointer]:
+          - generic [ref=e460]: Emergency & 911
+          - generic [ref=e461]: ambulance
+          - generic [ref=e462]: ambulância
+          - generic [ref=e463]:
+            - generic [ref=e464]:
+              - button "1 stars" [disabled] [ref=e465]: ☆
+              - button "2 stars" [disabled] [ref=e466]: ☆
+              - button "3 stars" [disabled] [ref=e467]: ☆
+              - button "4 stars" [disabled] [ref=e468]: ☆
+              - button "5 stars" [disabled] [ref=e469]: ☆
+            - generic [ref=e470]: HIGH
+        - button "Emergency & 911 dispatcher operador / atendente 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e472] [cursor=pointer]:
+          - generic [ref=e473]: Emergency & 911
+          - generic [ref=e474]: dispatcher
+          - generic [ref=e475]: operador / atendente
+          - generic [ref=e476]:
+            - generic [ref=e477]:
+              - button "1 stars" [disabled] [ref=e478]: ☆
+              - button "2 stars" [disabled] [ref=e479]: ☆
+              - button "3 stars" [disabled] [ref=e480]: ☆
+              - button "4 stars" [disabled] [ref=e481]: ☆
+              - button "5 stars" [disabled] [ref=e482]: ☆
+            - generic [ref=e483]: HIGH
+        - button "Emergency & 911 bleeding sangramento 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e485] [cursor=pointer]:
+          - generic [ref=e486]: Emergency & 911
+          - generic [ref=e487]: bleeding
+          - generic [ref=e488]: sangramento
+          - generic [ref=e489]:
+            - generic [ref=e490]:
+              - button "1 stars" [disabled] [ref=e491]: ☆
+              - button "2 stars" [disabled] [ref=e492]: ☆
+              - button "3 stars" [disabled] [ref=e493]: ☆
+              - button "4 stars" [disabled] [ref=e494]: ☆
+              - button "5 stars" [disabled] [ref=e495]: ☆
+            - generic [ref=e496]: HIGH
+        - button "Emergency & 911 unconscious inconsciente / desacordado 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e498] [cursor=pointer]:
+          - generic [ref=e499]: Emergency & 911
+          - generic [ref=e500]: unconscious
+          - generic [ref=e501]: inconsciente / desacordado
+          - generic [ref=e502]:
+            - generic [ref=e503]:
+              - button "1 stars" [disabled] [ref=e504]: ☆
+              - button "2 stars" [disabled] [ref=e505]: ☆
+              - button "3 stars" [disabled] [ref=e506]: ☆
+              - button "4 stars" [disabled] [ref=e507]: ☆
+              - button "5 stars" [disabled] [ref=e508]: ☆
+            - generic [ref=e509]: HIGH
+        - button "Emergency & 911 choking engasgo / asfixia 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e511] [cursor=pointer]:
+          - generic [ref=e512]: Emergency & 911
+          - generic [ref=e513]: choking
+          - generic [ref=e514]: engasgo / asfixia
+          - generic [ref=e515]:
+            - generic [ref=e516]:
+              - button "1 stars" [disabled] [ref=e517]: ☆
+              - button "2 stars" [disabled] [ref=e518]: ☆
+              - button "3 stars" [disabled] [ref=e519]: ☆
+              - button "4 stars" [disabled] [ref=e520]: ☆
+              - button "5 stars" [disabled] [ref=e521]: ☆
+            - generic [ref=e522]: MEDIUM
+        - button "Emergency & 911 seizure convulsão 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e524] [cursor=pointer]:
+          - generic [ref=e525]: Emergency & 911
+          - generic [ref=e526]: seizure
+          - generic [ref=e527]: convulsão
+          - generic [ref=e528]:
+            - generic [ref=e529]:
+              - button "1 stars" [disabled] [ref=e530]: ☆
+              - button "2 stars" [disabled] [ref=e531]: ☆
+              - button "3 stars" [disabled] [ref=e532]: ☆
+              - button "4 stars" [disabled] [ref=e533]: ☆
+              - button "5 stars" [disabled] [ref=e534]: ☆
+            - generic [ref=e535]: MEDIUM
+        - button "Emergency & 911 fire incêndio / fogo 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e537] [cursor=pointer]:
+          - generic [ref=e538]: Emergency & 911
+          - generic [ref=e539]: fire
+          - generic [ref=e540]: incêndio / fogo
+          - generic [ref=e541]:
+            - generic [ref=e542]:
+              - button "1 stars" [disabled] [ref=e543]: ☆
+              - button "2 stars" [disabled] [ref=e544]: ☆
+              - button "3 stars" [disabled] [ref=e545]: ☆
+              - button "4 stars" [disabled] [ref=e546]: ☆
+              - button "5 stars" [disabled] [ref=e547]: ☆
+            - generic [ref=e548]: HIGH
+        - button "Emergency & 911 intruder invasor 1 stars 2 stars 3 stars 4 stars 5 stars LOW" [ref=e550] [cursor=pointer]:
+          - generic [ref=e551]: Emergency & 911
+          - generic [ref=e552]: intruder
+          - generic [ref=e553]: invasor
+          - generic [ref=e554]:
+            - generic [ref=e555]:
+              - button "1 stars" [disabled] [ref=e556]: ☆
+              - button "2 stars" [disabled] [ref=e557]: ☆
+              - button "3 stars" [disabled] [ref=e558]: ☆
+              - button "4 stars" [disabled] [ref=e559]: ☆
+              - button "5 stars" [disabled] [ref=e560]: ☆
+            - generic [ref=e561]: LOW
+        - button "Emergency & 911 overdose overdose / superdosagem 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e563] [cursor=pointer]:
+          - generic [ref=e564]: Emergency & 911
+          - generic [ref=e565]: overdose
+          - generic [ref=e566]: overdose / superdosagem
+          - generic [ref=e567]:
+            - generic [ref=e568]:
+              - button "1 stars" [disabled] [ref=e569]: ☆
+              - button "2 stars" [disabled] [ref=e570]: ☆
+              - button "3 stars" [disabled] [ref=e571]: ☆
+              - button "4 stars" [disabled] [ref=e572]: ☆
+              - button "5 stars" [disabled] [ref=e573]: ☆
+            - generic [ref=e574]: MEDIUM
+        - button "Insurance deductible franquia 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e576] [cursor=pointer]:
+          - generic [ref=e577]: Insurance
+          - generic [ref=e578]: deductible
+          - generic [ref=e579]: franquia
+          - generic [ref=e580]:
+            - generic [ref=e581]:
+              - button "1 stars" [disabled] [ref=e582]: ☆
+              - button "2 stars" [disabled] [ref=e583]: ☆
+              - button "3 stars" [disabled] [ref=e584]: ☆
+              - button "4 stars" [disabled] [ref=e585]: ☆
+              - button "5 stars" [disabled] [ref=e586]: ☆
+            - generic [ref=e587]: HIGH
+        - button "Insurance premium prêmio / valor da apólice 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e589] [cursor=pointer]:
+          - generic [ref=e590]: Insurance
+          - generic [ref=e591]: premium
+          - generic [ref=e592]: prêmio / valor da apólice
+          - generic [ref=e593]:
+            - generic [ref=e594]:
+              - button "1 stars" [disabled] [ref=e595]: ☆
+              - button "2 stars" [disabled] [ref=e596]: ☆
+              - button "3 stars" [disabled] [ref=e597]: ☆
+              - button "4 stars" [disabled] [ref=e598]: ☆
+              - button "5 stars" [disabled] [ref=e599]: ☆
+            - generic [ref=e600]: HIGH
+        - button "Insurance claim sinistro / solicitação 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e602] [cursor=pointer]:
+          - generic [ref=e603]: Insurance
+          - generic [ref=e604]: claim
+          - generic [ref=e605]: sinistro / solicitação
+          - generic [ref=e606]:
+            - generic [ref=e607]:
+              - button "1 stars" [disabled] [ref=e608]: ☆
+              - button "2 stars" [disabled] [ref=e609]: ☆
+              - button "3 stars" [disabled] [ref=e610]: ☆
+              - button "4 stars" [disabled] [ref=e611]: ☆
+              - button "5 stars" [disabled] [ref=e612]: ☆
+            - generic [ref=e613]: HIGH
+        - button "Insurance coverage cobertura 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e615] [cursor=pointer]:
+          - generic [ref=e616]: Insurance
+          - generic [ref=e617]: coverage
+          - generic [ref=e618]: cobertura
+          - generic [ref=e619]:
+            - generic [ref=e620]:
+              - button "1 stars" [disabled] [ref=e621]: ☆
+              - button "2 stars" [disabled] [ref=e622]: ☆
+              - button "3 stars" [disabled] [ref=e623]: ☆
+              - button "4 stars" [disabled] [ref=e624]: ☆
+              - button "5 stars" [disabled] [ref=e625]: ☆
+            - generic [ref=e626]: HIGH
+        - button "Insurance policy apólice 1 stars 2 stars 3 stars 4 stars 5 stars HIGH" [ref=e628] [cursor=pointer]:
+          - generic [ref=e629]: Insurance
+          - generic [ref=e630]: policy
+          - generic [ref=e631]: apólice
+          - generic [ref=e632]:
+            - generic [ref=e633]:
+              - button "1 stars" [disabled] [ref=e634]: ☆
+              - button "2 stars" [disabled] [ref=e635]: ☆
+              - button "3 stars" [disabled] [ref=e636]: ☆
+              - button "4 stars" [disabled] [ref=e637]: ☆
+              - button "5 stars" [disabled] [ref=e638]: ☆
+            - generic [ref=e639]: HIGH
+        - button "Insurance waiver renúncia / isenção 1 stars 2 stars 3 stars 4 stars 5 stars LOW" [ref=e641] [cursor=pointer]:
+          - generic [ref=e642]: Insurance
+          - generic [ref=e643]: waiver
+          - generic [ref=e644]: renúncia / isenção
+          - generic [ref=e645]:
+            - generic [ref=e646]:
+              - button "1 stars" [disabled] [ref=e647]: ☆
+              - button "2 stars" [disabled] [ref=e648]: ☆
+              - button "3 stars" [disabled] [ref=e649]: ☆
+              - button "4 stars" [disabled] [ref=e650]: ☆
+              - button "5 stars" [disabled] [ref=e651]: ☆
+            - generic [ref=e652]: LOW
+        - button "Insurance beneficiary beneficiário 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e654] [cursor=pointer]:
+          - generic [ref=e655]: Insurance
+          - generic [ref=e656]: beneficiary
+          - generic [ref=e657]: beneficiário
+          - generic [ref=e658]:
+            - generic [ref=e659]:
+              - button "1 stars" [disabled] [ref=e660]: ☆
+              - button "2 stars" [disabled] [ref=e661]: ☆
+              - button "3 stars" [disabled] [ref=e662]: ☆
+              - button "4 stars" [disabled] [ref=e663]: ☆
+              - button "5 stars" [disabled] [ref=e664]: ☆
+            - generic [ref=e665]: MEDIUM
+        - button "Insurance liability responsabilidade civil 1 stars 2 stars 3 stars 4 stars 5 stars MEDIUM" [ref=e667] [cursor=pointer]:
+          - generic [ref=e668]: Insurance
+          - generic [ref=e669]: liability
+          - generic [ref=e670]: responsabilidade civil
+          - generic [ref=e671]:
+            - generic [ref=e672]:
+              - button "1 stars" [disabled] [ref=e673]: ☆
+              - button "2 stars" [disabled] [ref=e674]: ☆
+              - button "3 stars" [disabled] [ref=e675]: ☆
+              - button "4 stars" [disabled] [ref=e676]: ☆
+              - button "5 stars" [disabled] [ref=e677]: ☆
+            - generic [ref=e678]: MEDIUM
