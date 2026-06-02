@@ -14,6 +14,11 @@ const typeLabel = {
   equivalent: 'equivalent',
 } as const
 
+/** Thin, barely-visible vertical rule separating the collapsed-row sections. */
+function Divider({ className = '' }: { className?: string }) {
+  return <div aria-hidden className={`w-px self-stretch bg-gray-200 ${className}`} />
+}
+
 export function WordCard({ word }: { word: Word }) {
   const [expanded, setExpanded] = useState(false)
   const stars = useAppStore((s) => s.progress[word.id]?.stars ?? 0)
@@ -44,17 +49,29 @@ export function WordCard({ word }: { word: Word }) {
         }}
         className="flex cursor-pointer items-center gap-4 p-4"
       >
-        {/* Word + translation + example usage */}
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-            <span className="text-lg font-extrabold text-navy">{word.word}</span>
-            <span className="text-sm font-medium text-gray-600">{word.translation}</span>
-            <span className="hidden max-w-sm truncate text-sm italic text-gray-400 lg:block">
-              &ldquo;{word.exampleEN}&rdquo;
-            </span>
-          </div>
-          <p className="mt-0.5 line-clamp-1 text-xs text-gray-400">{word.definition}</p>
+        {/* English word */}
+        <div className="min-w-0 flex-1 truncate text-lg font-extrabold text-navy">
+          {word.word}
         </div>
+
+        <Divider />
+
+        {/* Translation — same size & color as the word, just not bold */}
+        <div className="min-w-0 flex-1 truncate text-center text-lg text-navy">
+          {word.translation}
+        </div>
+
+        <Divider className="hidden lg:block" />
+
+        {/* Application + definition — black */}
+        <div className="hidden min-w-0 flex-[1.6] text-center lg:block">
+          <p className="truncate text-sm italic text-gray-900">
+            &ldquo;{word.exampleEN}&rdquo;
+          </p>
+          <p className="truncate text-xs text-gray-900">{word.definition}</p>
+        </div>
+
+        <Divider className="hidden lg:block" />
 
         {/* Audio — same buttons as the open card, minus "Human" */}
         <div className="shrink-0">
