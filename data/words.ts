@@ -1,6 +1,7 @@
 import { Word } from '@/lib/types'
+import { AGENCIES } from '@/data/agencies'
 
-export const WORDS: Word[] = [
+const RAW: Omit<Word, 'agency'>[] = [
   // ---------------- Basics ----------------
   {
     id: 'w001', word: 'appointment', translation: 'compromisso / consulta',
@@ -489,3 +490,10 @@ export const WORDS: Word[] = [
     linguisticType: 'false-cognate', testFrequency: 'medium', tags: ['insurance', 'legal'],
   },
 ]
+
+// Each word is assigned one agency in round-robin order so all four agencies are
+// represented across the demo dataset (single-select "Agências" filter).
+export const WORDS: Word[] = RAW.map((w, i) => ({
+  ...w,
+  agency: AGENCIES[i % AGENCIES.length],
+}))

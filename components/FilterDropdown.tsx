@@ -1,15 +1,28 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
-import { CATEGORIES } from '@/data/categories'
 
-export function CategoryFilter({
+export interface FilterOption {
+  value: string
+  label: string
+}
+
+export function FilterDropdown({
+  label,
+  options,
   selected,
   onToggle,
   onClear,
+  single = false,
+  allLabel = 'All',
 }: {
+  label: string
+  options: FilterOption[]
   selected: string[]
-  onToggle: (c: string) => void
+  onToggle: (value: string) => void
   onClear: () => void
+  /** Single-select: picking an option closes the panel. */
+  single?: boolean
+  allLabel?: string
 }) {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -25,19 +38,22 @@ export function CategoryFilter({
     return () => document.removeEventListener('mousedown', onDocClick)
   }, [open])
 
+  const pill = (active: boolean) =>
+    `rounded-full border px-3 py-1 text-xs font-semibold ${
+      active
+        ? 'bg-navy text-white border-navy'
+        : 'bg-white text-gray-600 border-gray-200 hover:border-navy'
+    }`
+
   return (
     <div ref={ref} className="relative inline-block">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        className={`flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-semibold ${
-          count > 0
-            ? 'bg-navy text-white border-navy'
-            : 'bg-white text-gray-600 border-gray-200 hover:border-navy'
-        }`}
+        className={`flex items-center gap-1.5 ${pill(count > 0)}`}
       >
-        Tipo
+        {label}
         {count > 0 && (
           <span className="rounded-full bg-white/25 px-1.5 text-[10px]">{count}</span>
         )}
@@ -62,33 +78,24 @@ export function CategoryFilter({
       {open && (
         <div className="absolute left-0 top-full z-20 mt-2 w-64 rounded-xl border border-gray-200 bg-white p-2 shadow-lg">
           <div className="flex flex-wrap gap-2">
-            <button
-              type="button"
-              onClick={onClear}
-              className={`rounded-full border px-3 py-1 text-xs font-semibold ${
-                count === 0
-                  ? 'bg-navy text-white border-navy'
-                  : 'bg-white text-gray-600 border-gray-200 hover:border-navy'
-              }`}
-            >
-              All
+            <button type="button" onClick={onClear} className={pill(count === 0)}>
+              {allLabel}
             </button>
-            {CATEGORIES.map((c) => {
-              const active = selected.includes(c)
+            {options.map((o) => {
+              const active = selected.includes(o.value)
               return (
                 <button
-                  key={c}
+                  key={o.value}
                   type="button"
-                  onClick={() => onToggle(c)}
+                  onClick={() => {
+                    onToggle(o.value)
+                    if (single) setOpen(false)
+                  }}
                   aria-pressed={active}
-                  className={`rounded-full border px-3 py-1 text-xs font-semibold ${
-                    active
-                      ? 'bg-navy text-white border-navy'
-                      : 'bg-white text-gray-600 border-gray-200 hover:border-navy'
-                  }`}
+                  className={pill(active)}
                 >
                   {active ? '✓ ' : ''}
-                  {c}
+                  {o.label}
                 </button>
               )
             })}

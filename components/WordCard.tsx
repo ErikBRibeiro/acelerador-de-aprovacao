@@ -49,20 +49,20 @@ export function WordCard({ word }: { word: Word }) {
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
             <span className="text-lg font-extrabold text-navy">{word.word}</span>
             <span className="text-sm font-medium text-gray-600">{word.translation}</span>
-            <span className="hidden min-w-0 flex-1 truncate text-sm italic text-gray-400 lg:block">
+            <span className="hidden max-w-sm truncate text-sm italic text-gray-400 lg:block">
               &ldquo;{word.exampleEN}&rdquo;
             </span>
           </div>
           <p className="mt-0.5 line-clamp-1 text-xs text-gray-400">{word.definition}</p>
         </div>
 
-        {/* Audio — listen without opening the card */}
+        {/* Audio — same buttons as the open card, minus "Human" */}
         <div className="shrink-0">
-          <AudioButtons word={word.word} sentence={word.exampleEN} compact />
+          <AudioButtons word={word.word} sentence={word.exampleEN} showHuman={false} />
         </div>
 
         {/* Categories */}
-        <div className="hidden shrink-0 flex-wrap gap-1 md:flex">
+        <div className="hidden shrink-0 flex-wrap gap-1 lg:flex">
           {cats.map((c) => (
             <Badge key={c} tone="gray">
               {c}
@@ -113,6 +113,7 @@ export function WordCard({ word }: { word: Word }) {
                 <p className="mt-1 text-sm italic text-gray-500">{word.definitionPT}</p>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
                   <Badge tone="green">{typeLabel[word.linguisticType]}</Badge>
+                  <Badge tone="amber">{word.agency}</Badge>
                   <Badge tone="gray">{word.subcategory}</Badge>
                   {word.tags.map((t) => (
                     <Badge key={t} tone="gray">

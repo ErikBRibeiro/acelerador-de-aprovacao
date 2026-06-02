@@ -2,23 +2,24 @@
 import { useState } from 'react'
 import { WORDS } from '@/data/words'
 import { WordCard } from '@/components/WordCard'
-import { CategoryFilter } from '@/components/CategoryFilter'
-import { wordCategories } from '@/lib/words-utils'
+import { FilterBar } from '@/components/FilterBar'
+import { useAppStore } from '@/lib/store'
+import { seededStars } from '@/lib/seed'
+import { matchesFacets } from '@/lib/words-utils'
 
 export default function Study() {
   const [cats, setCats] = useState<string[]>([])
+  const [phenomena, setPhenomena] = useState<string[]>([])
+  const [fixations, setFixations] = useState<string[]>([])
+  const [agency, setAgency] = useState<string | null>(null)
   const [q, setQ] = useState('')
-
-  const toggle = (c: string) =>
-    setCats((prev) => (prev.includes(c) ? prev.filter((x) => x !== c) : [...prev, c]))
+  const progress = useAppStore((s) => s.progress)
 
   const filtered = WORDS.filter((w) => {
-    const wCats = wordCategories(w)
-    // AND across selected categories: include a word only if it matches ALL selected filters
-    const catMatch = cats.length === 0 || cats.every((c) => wCats.includes(c))
+    const stars = progress[w.id]?.stars ?? seededStars(w.id)
     const text = `${w.word} ${w.translation}`.toLowerCase()
     const qMatch = q === '' || text.includes(q.toLowerCase())
-    return catMatch && qMatch
+    return matchesFacets(w, stars, { cats, phenomena, fixations, agency }) && qMatch
   })
 
   return (
@@ -31,7 +32,18 @@ export default function Study() {
         className="mb-4 w-full max-w-sm rounded-lg border border-gray-200 px-3 py-2 text-sm"
       />
       <div className="mb-6">
-        <CategoryFilter selected={cats} onToggle={toggle} onClear={() => setCats([])} />
+        <FilterBar
+          cats={cats}
+          setCats={setCats}
+          phenomena={phenomena}
+          setPhenomena={setPhenomena}
+          fixations={fixations}
+          setFixations={setFixations}
+          agency={agency}
+          setAgency={setAgency}
+          extraActive={q !== ''}
+          onClearExtra={() => setQ('')}
+        />
       </div>
       <div className="flex flex-col gap-3">
         {filtered.map((w) => (

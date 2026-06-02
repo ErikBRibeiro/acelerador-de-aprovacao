@@ -5,71 +5,57 @@ export function AudioButtons({
   word,
   sentence,
   humanUrl,
-  compact = false,
+  showHuman = true,
 }: {
   word: string
   sentence?: string
   humanUrl?: string
-  /** Icon-only variant (word + sentence) for the collapsed word row. */
-  compact?: boolean
+  /** Show the "Human" recording button (hidden in the collapsed word row). */
+  showHuman?: boolean
 }) {
-  if (compact) {
-    return (
-      <div className="flex items-center gap-0.5">
-        <button
-          onClick={(e) => {
-            e.stopPropagation()
-            speak(word)
-          }}
-          title="Ouvir palavra"
-          aria-label="Ouvir palavra"
-          className="rounded-md px-2 py-1 text-sm leading-none text-navy hover:bg-blue-50"
-        >
-          🔊
-        </button>
-        {sentence && (
-          <button
-            onClick={(e) => {
-              e.stopPropagation()
-              speak(sentence)
-            }}
-            title="Ouvir frase de exemplo"
-            aria-label="Ouvir frase de exemplo"
-            className="rounded-md px-2 py-1 text-sm leading-none text-navy hover:bg-blue-50"
-          >
-            💬
-          </button>
-        )}
-      </div>
-    )
-  }
-
   return (
     <div className="flex flex-wrap items-center gap-2">
       <button
-        onClick={() => speak(word)}
+        onClick={(e) => {
+          e.stopPropagation()
+          speak(word)
+        }}
+        aria-label="Neural Audio"
+        title="Neural Audio"
         className="flex items-center gap-1 rounded-md bg-navy px-3 py-1.5 text-xs font-bold text-white hover:bg-navy-950"
       >
-        ▶ Neural Audio
+        <span aria-hidden>▶</span>
+        <span className="hidden md:inline">Neural Audio</span>
       </button>
       {sentence && (
         <button
-          onClick={() => speak(sentence)}
-          className="rounded-md border border-navy px-3 py-1.5 text-xs font-bold text-navy hover:bg-blue-50"
+          onClick={(e) => {
+            e.stopPropagation()
+            speak(sentence)
+          }}
+          aria-label="Sentence"
+          title="Sentence"
+          className="flex items-center gap-1 rounded-md border border-navy px-3 py-1.5 text-xs font-bold text-navy hover:bg-blue-50"
         >
-          ▶ Sentence
+          <span aria-hidden>▶</span>
+          <span className="hidden md:inline">Sentence</span>
         </button>
       )}
-      <button
-        onClick={() => {
-          if (humanUrl) new Audio(humanUrl).play()
-        }}
-        disabled={!humanUrl}
-        title={humanUrl ? 'Play human recording' : 'Human audio coming soon'}
-        className="rounded-md border border-gray-300 px-3 py-1.5 text-xs font-bold text-gray-600 enabled:hover:bg-gray-50 disabled:opacity-40"
-      >
-        🎧 Human
-      </button>
+      {showHuman && (
+        <button
+          onClick={(e) => {
+            e.stopPropagation()
+            if (humanUrl) new Audio(humanUrl).play()
+          }}
+          disabled={!humanUrl}
+          aria-label="Human"
+          title={humanUrl ? 'Play human recording' : 'Human audio coming soon'}
+          className="flex items-center gap-1 rounded-md border border-gray-300 px-3 py-1.5 text-xs font-bold text-gray-600 enabled:hover:bg-gray-50 disabled:opacity-40"
+        >
+          <span aria-hidden>🎧</span>
+          <span className="hidden md:inline">Human</span>
+        </button>
+      )}
     </div>
   )
 }

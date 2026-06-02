@@ -1,5 +1,10 @@
 export type LinguisticType = 'cognate' | 'false-cognate' | 'equivalent'
 export type TestFrequency = 'high' | 'medium' | 'low'
+export type Agency =
+  | 'Big Language Solutions'
+  | 'LanguageLine Solutions'
+  | 'TransPerfect'
+  | 'Pangeanic'
 
 export interface ExampleSentence {
   en: string
@@ -25,6 +30,8 @@ export interface Word {
   audioHumanUrl: string
   linguisticType: LinguisticType
   testFrequency: TestFrequency
+  /** Translation agency this word belongs to (single-select filter). */
+  agency: Agency
   tags: string[]
   /** Additional example sentences shown in the expanded card. */
   extraExamples?: ExampleSentence[]
