@@ -49,14 +49,14 @@ export function WordCard({ word }: { word: Word }) {
         }}
         className="flex cursor-pointer items-center gap-4 p-4"
       >
-        {/* English word — centered on both axes, with its star rating floating
-            at the upper-right so it doesn't shift the word off-center */}
-        <div className="relative flex min-w-0 flex-1 items-center justify-center self-stretch">
-          <p className="max-w-full truncate text-center text-lg font-extrabold text-navy">
+        {/* English word — centered in its space, with its (editable) star
+            rating to the right; both vertically centered */}
+        <div className="flex min-w-0 flex-1 items-center gap-2 self-stretch">
+          <p className="min-w-0 flex-1 truncate text-center text-lg font-extrabold text-navy">
             {word.word}
           </p>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2">
-            <StarRating value={stars} />
+          <div className="shrink-0">
+            <StarRating value={stars} size="lg" onChange={(v) => setStars(word.id, v)} />
           </div>
         </div>
 
@@ -70,7 +70,7 @@ export function WordCard({ word }: { word: Word }) {
         <Divider className="hidden lg:block" />
 
         {/* Application + definition — black */}
-        <div className="hidden min-w-0 flex-[1.6] text-center lg:block">
+        <div className="hidden min-w-0 flex-1 text-center lg:block">
           <p className="truncate text-sm italic text-gray-900">
             &ldquo;{word.exampleEN}&rdquo;
           </p>
@@ -82,15 +82,6 @@ export function WordCard({ word }: { word: Word }) {
         {/* Audio — same buttons as the open card, minus "Human" */}
         <div className="shrink-0">
           <AudioButtons word={word.word} sentence={word.exampleEN} showHuman={false} iconOnly />
-        </div>
-
-        {/* Categories */}
-        <div className="hidden shrink-0 flex-wrap gap-1 lg:flex">
-          {cats.map((c) => (
-            <Badge key={c} tone="gray">
-              {c}
-            </Badge>
-          ))}
         </div>
 
         {/* Frequency */}
@@ -132,6 +123,11 @@ export function WordCard({ word }: { word: Word }) {
                 <div className="mt-2 flex flex-wrap items-center gap-2">
                   <Badge tone="green">{typeLabel[word.linguisticType]}</Badge>
                   <Badge tone="amber">{word.agency}</Badge>
+                  {cats.map((c) => (
+                    <Badge key={c} tone="navy">
+                      {c}
+                    </Badge>
+                  ))}
                   <Badge tone="gray">{word.subcategory}</Badge>
                   {word.tags.map((t) => (
                     <Badge key={t} tone="gray">

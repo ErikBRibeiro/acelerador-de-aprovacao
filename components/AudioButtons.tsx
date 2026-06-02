@@ -27,7 +27,7 @@ export function AudioButtons({
         title="Neural Audio"
         className="flex items-center gap-1 rounded-md bg-navy px-3 py-1.5 text-xs font-bold text-white hover:bg-navy-950"
       >
-        <span aria-hidden>▶</span>
+        <span aria-hidden className={iconOnly ? 'text-base leading-none' : undefined}>🔊</span>
         {!iconOnly && <span className="hidden md:inline">Neural Audio</span>}
       </button>
       {sentence && (
@@ -40,7 +40,7 @@ export function AudioButtons({
           title="Sentence"
           className="flex items-center gap-1 rounded-md border border-navy px-3 py-1.5 text-xs font-bold text-navy hover:bg-blue-50"
         >
-          <span aria-hidden>▶</span>
+          <span aria-hidden className={iconOnly ? 'text-base leading-none' : undefined}>📣</span>
           {!iconOnly && <span className="hidden md:inline">Sentence</span>}
         </button>
       )}

@@ -11,7 +11,7 @@ export function StarRating({
 }) {
   const cls = size === 'lg' ? 'text-xl' : 'text-sm'
   return (
-    <div className={`text-amber-500 ${cls} select-none`}>
+    <div className={`text-blue-500 ${cls} select-none`}>
       {[1, 2, 3, 4, 5].map((n) => (
         <button
           key={n}
