@@ -49,9 +49,15 @@ export function WordCard({ word }: { word: Word }) {
         }}
         className="flex cursor-pointer items-center gap-4 p-4"
       >
-        {/* English word */}
-        <div className="min-w-0 flex-1 truncate text-lg font-extrabold text-navy">
-          {word.word}
+        {/* English word — centered on both axes, with its star rating floating
+            at the upper-right so it doesn't shift the word off-center */}
+        <div className="relative flex min-w-0 flex-1 items-center justify-center self-stretch">
+          <p className="max-w-full truncate text-center text-lg font-extrabold text-navy">
+            {word.word}
+          </p>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2">
+            <StarRating value={stars} />
+          </div>
         </div>
 
         <Divider />
@@ -75,7 +81,7 @@ export function WordCard({ word }: { word: Word }) {
 
         {/* Audio — same buttons as the open card, minus "Human" */}
         <div className="shrink-0">
-          <AudioButtons word={word.word} sentence={word.exampleEN} showHuman={false} />
+          <AudioButtons word={word.word} sentence={word.exampleEN} showHuman={false} iconOnly />
         </div>
 
         {/* Categories */}
@@ -85,11 +91,6 @@ export function WordCard({ word }: { word: Word }) {
               {c}
             </Badge>
           ))}
-        </div>
-
-        {/* Stars */}
-        <div className="shrink-0">
-          <StarRating value={stars} />
         </div>
 
         {/* Frequency */}
