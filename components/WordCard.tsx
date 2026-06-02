@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import type { Word } from '@/lib/types'
 import { useAppStore } from '@/lib/store'
+import { wordCategories, wordExamples } from '@/lib/words-utils'
 import { StarRating } from './StarRating'
 import { Badge } from './Badge'
 import { AudioButtons } from './AudioButtons'
@@ -19,15 +20,20 @@ export function WordCard({ word }: { word: Word }) {
   const lastReviewed = useAppStore((s) => s.progress[word.id]?.lastReviewed)
   const setStars = useAppStore((s) => s.setStars)
   const danger = stars > 0 && stars <= 2
+  const cats = wordCategories(word)
+  const examples = wordExamples(word)
+
   return (
     <div
-      className={`rounded-xl bg-white border-t-[3px] ${
+      className={`overflow-hidden rounded-xl bg-white border-l-4 ${
         danger ? 'border-red-600' : 'border-navy'
       } ${expanded ? 'shadow-cardLg' : 'shadow-card'} transition-shadow`}
     >
+      {/* Collapsed row — full width */}
       <div
         role="button"
         tabIndex={0}
+        aria-expanded={expanded}
         onClick={() => setExpanded((e) => !e)}
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
@@ -35,57 +41,108 @@ export function WordCard({ word }: { word: Word }) {
             setExpanded((x) => !x)
           }
         }}
-        className="w-full cursor-pointer text-left p-4"
+        className="flex cursor-pointer items-center gap-4 p-4"
       >
-        <div className="text-[9px] font-bold tracking-wider text-gray-500 uppercase">
-          {word.category}
+        {/* Word + translation */}
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <span className="text-lg font-extrabold text-navy">{word.word}</span>
+            <span className="text-sm font-medium text-gray-600">{word.translation}</span>
+          </div>
+          <p className="mt-0.5 line-clamp-1 text-xs text-gray-400">{word.definition}</p>
         </div>
-        <div className="text-lg font-extrabold text-navy">{word.word}</div>
-        <div className="text-sm font-medium text-gray-700 mb-2">{word.translation}</div>
-        <div className="flex items-center justify-between">
+
+        {/* Categories */}
+        <div className="hidden shrink-0 flex-wrap gap-1 md:flex">
+          {cats.map((c) => (
+            <Badge key={c} tone="gray">
+              {c}
+            </Badge>
+          ))}
+        </div>
+
+        {/* Stars */}
+        <div className="shrink-0">
           <StarRating value={stars} />
+        </div>
+
+        {/* Frequency */}
+        <div className="hidden shrink-0 sm:block">
           <Badge tone={freqTone[word.testFrequency]}>{word.testFrequency.toUpperCase()}</Badge>
         </div>
+
+        {/* Chevron */}
+        <span
+          className={`shrink-0 text-gray-400 transition-transform ${expanded ? 'rotate-180' : ''}`}
+          aria-hidden
+        >
+          ▾
+        </span>
       </div>
+
+      {/* Expanded content — opens downward */}
       {expanded && (
         <div className="border-t border-gray-100">
-          {word.imageUrl && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={word.imageUrl}
-              alt={word.word}
-              className="h-32 w-full object-cover"
-            />
-          )}
-          <div className="p-4 border-b border-gray-100">
-            <div className="text-[10px] font-semibold tracking-wide text-gray-500">DEFINITION</div>
-            <p className="text-sm text-gray-700">{word.definition}</p>
-          </div>
-          <div className="p-4 border-b border-gray-100 bg-[#fafbff]">
-            <div className="text-[10px] font-semibold tracking-wide text-gray-500">EXAMPLE</div>
-            <p className="text-sm italic text-navy">&ldquo;{word.exampleEN}&rdquo;</p>
-            <p className="text-xs text-gray-500">&ldquo;{word.examplePT}&rdquo;</p>
-          </div>
-          <div className="p-4 border-b border-gray-100 flex flex-wrap items-center gap-2">
-            <Badge tone="green">{typeLabel[word.linguisticType]}</Badge>
-            <Badge tone="gray">{word.subcategory}</Badge>
-            {word.tags.map((t) => (
-              <Badge key={t} tone="gray">
-                #{t}
-              </Badge>
-            ))}
-          </div>
-          <div className="p-4 flex flex-col gap-3">
-            <div>
-              <div className="text-[10px] font-semibold tracking-wide text-gray-500 mb-1">
-                YOUR FIXATION
-              </div>
-              <StarRating value={stars} size="lg" onChange={(v) => setStars(word.id, v)} />
+          <div className="grid grid-cols-1 gap-0 md:grid-cols-[220px_1fr]">
+            {/* Image */}
+            <div className="border-b border-gray-100 md:border-b-0 md:border-r">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={word.imageUrl}
+                alt={word.word}
+                className="h-44 w-full object-cover md:h-full"
+              />
             </div>
-            <AudioButtons word={word.word} sentence={word.exampleEN} humanUrl={word.audioHumanUrl} />
-            <div className="text-[10px] text-gray-400">
-              Last review:{' '}
-              {lastReviewed ? new Date(lastReviewed).toLocaleDateString() : '—'}
+
+            {/* Details */}
+            <div className="flex flex-col">
+              <div className="p-4 border-b border-gray-100">
+                <div className="text-[10px] font-semibold tracking-wide text-gray-500">
+                  DEFINITION
+                </div>
+                <p className="text-sm text-gray-700">{word.definition}</p>
+                <div className="mt-2 flex flex-wrap items-center gap-2">
+                  <Badge tone="green">{typeLabel[word.linguisticType]}</Badge>
+                  <Badge tone="gray">{word.subcategory}</Badge>
+                  {word.tags.map((t) => (
+                    <Badge key={t} tone="gray">
+                      #{t}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              <div className="p-4 border-b border-gray-100 bg-[#fafbff]">
+                <div className="text-[10px] font-semibold tracking-wide text-gray-500">
+                  EXAMPLES IN CONTEXT
+                </div>
+                <ul className="mt-1 space-y-2">
+                  {examples.map((ex, i) => (
+                    <li key={i}>
+                      <p className="text-sm italic text-navy">&ldquo;{ex.en}&rdquo;</p>
+                      <p className="text-xs text-gray-500">&ldquo;{ex.pt}&rdquo;</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex flex-col gap-3 p-4">
+                <div>
+                  <div className="mb-1 text-[10px] font-semibold tracking-wide text-gray-500">
+                    YOUR FIXATION
+                  </div>
+                  <StarRating value={stars} size="lg" onChange={(v) => setStars(word.id, v)} />
+                </div>
+                <AudioButtons
+                  word={word.word}
+                  sentence={word.exampleEN}
+                  humanUrl={word.audioHumanUrl}
+                />
+                <div className="text-[10px] text-gray-400">
+                  Last review:{' '}
+                  {lastReviewed ? new Date(lastReviewed).toLocaleDateString() : '—'}
+                </div>
+              </div>
             </div>
           </div>
         </div>

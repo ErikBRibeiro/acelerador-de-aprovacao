@@ -3,17 +3,24 @@ import { useState } from 'react'
 import { WORDS } from '@/data/words'
 import { WordCard } from '@/components/WordCard'
 import { CategoryFilter } from '@/components/CategoryFilter'
+import { wordCategories } from '@/lib/words-utils'
 
 export default function Study() {
-  const [cat, setCat] = useState('All')
+  const [cats, setCats] = useState<string[]>([])
   const [q, setQ] = useState('')
-  const filtered = WORDS.filter(
-    (w) =>
-      (cat === 'All' || w.category === cat) &&
-      (q === '' ||
-        w.word.toLowerCase().includes(q.toLowerCase()) ||
-        w.translation.toLowerCase().includes(q.toLowerCase())),
-  )
+
+  const toggle = (c: string) =>
+    setCats((prev) => (prev.includes(c) ? prev.filter((x) => x !== c) : [...prev, c]))
+
+  const filtered = WORDS.filter((w) => {
+    const wCats = wordCategories(w)
+    // OR across selected categories: include a word if it matches ANY selected filter
+    const catMatch = cats.length === 0 || cats.some((c) => wCats.includes(c))
+    const text = `${w.word} ${w.translation}`.toLowerCase()
+    const qMatch = q === '' || text.includes(q.toLowerCase())
+    return catMatch && qMatch
+  })
+
   return (
     <div>
       <h1 className="mb-4 text-2xl font-extrabold text-navy">Study Words</h1>
@@ -24,14 +31,17 @@ export default function Study() {
         className="mb-4 w-full max-w-sm rounded-lg border border-gray-200 px-3 py-2 text-sm"
       />
       <div className="mb-6">
-        <CategoryFilter value={cat} onChange={setCat} />
+        <CategoryFilter selected={cats} onToggle={toggle} onClear={() => setCats([])} />
       </div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="flex flex-col gap-3">
         {filtered.map((w) => (
           <WordCard key={w.id} word={w} />
         ))}
       </div>
       {filtered.length === 0 && <p className="text-gray-500">No words match.</p>}
+      <p className="mt-4 text-sm text-gray-500">
+        {filtered.length} of {WORDS.length} words
+      </p>
     </div>
   )
 }

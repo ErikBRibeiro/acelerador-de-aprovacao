@@ -62,9 +62,13 @@ export const WORDS: Word[] = [
     id: 'w008', word: 'confirm', translation: 'confirmar',
     definition: 'To state with assurance that something is true.',
     exampleEN: 'Can you confirm your address?', examplePT: 'Você pode confirmar seu endereço?',
-    category: 'Basics', subcategory: 'Common',
+    category: 'Basics', categories: ['Customer Service', 'Banking'], subcategory: 'Common',
     imageUrl: 'https://picsum.photos/seed/w008/400/300', audioHumanUrl: '',
     linguisticType: 'cognate', testFrequency: 'high', tags: ['service'],
+    extraExamples: [
+      { en: 'Please confirm your appointment by Friday.', pt: 'Por favor, confirme seu compromisso até sexta-feira.' },
+      { en: 'I just need to confirm a few details with you.', pt: 'Só preciso confirmar alguns detalhes com você.' },
+    ],
   },
 
   // ---------------- Medical & Clinics ----------------
@@ -72,9 +76,13 @@ export const WORDS: Word[] = [
     id: 'w009', word: 'prescription', translation: 'receita médica',
     definition: 'An instruction written by a doctor for medicine.',
     exampleEN: 'You need a prescription for this.', examplePT: 'Você precisa de uma receita para isso.',
-    category: 'Medical & Clinics', subcategory: 'Pharmacy',
+    category: 'Medical & Clinics', categories: ['Insurance'], subcategory: 'Pharmacy',
     imageUrl: 'https://picsum.photos/seed/w009/400/300', audioHumanUrl: '',
     linguisticType: 'false-cognate', testFrequency: 'high', tags: ['medical', 'pharmacy'],
+    extraExamples: [
+      { en: 'Does my insurance cover this prescription?', pt: 'Meu seguro cobre essa receita?' },
+      { en: 'The pharmacist filled my prescription quickly.', pt: 'O farmacêutico aviou minha receita rapidamente.' },
+    ],
   },
   {
     id: 'w010', word: 'symptom', translation: 'sintoma',
@@ -178,17 +186,24 @@ export const WORDS: Word[] = [
     id: 'w022', word: 'account', translation: 'conta',
     definition: 'A record or arrangement with a company or bank.',
     exampleEN: 'Please log in to your account.', examplePT: 'Por favor, acesse sua conta.',
-    category: 'Customer Service', subcategory: 'Support',
+    category: 'Customer Service', categories: ['Banking'], subcategory: 'Support',
     imageUrl: 'https://picsum.photos/seed/w022/400/300', audioHumanUrl: '',
     linguisticType: 'equivalent', testFrequency: 'high', tags: ['service'],
+    extraExamples: [
+      { en: 'I would like to open a savings account.', pt: 'Eu gostaria de abrir uma conta poupança.' },
+      { en: 'There is a problem with my account balance.', pt: 'Há um problema com o saldo da minha conta.' },
+    ],
   },
   {
     id: 'w023', word: 'invoice', translation: 'fatura',
     definition: 'A list of goods or services with their prices.',
     exampleEN: 'I will send you the invoice.', examplePT: 'Vou lhe enviar a fatura.',
-    category: 'Customer Service', subcategory: 'Billing',
+    category: 'Customer Service', categories: ['Banking'], subcategory: 'Billing',
     imageUrl: 'https://picsum.photos/seed/w023/400/300', audioHumanUrl: '',
     linguisticType: 'equivalent', testFrequency: 'medium', tags: ['service', 'money'],
+    extraExamples: [
+      { en: 'The invoice is due at the end of the month.', pt: 'A fatura vence no fim do mês.' },
+    ],
   },
   {
     id: 'w024', word: 'follow-up', translation: 'acompanhamento',
@@ -278,9 +293,13 @@ export const WORDS: Word[] = [
     id: 'w034', word: 'ambulance', translation: 'ambulância',
     definition: 'Emergency vehicle used to transport patients to a hospital.',
     exampleEN: 'Call an ambulance immediately.', examplePT: 'Chame uma ambulância imediatamente.',
-    category: 'Emergency & 911', subcategory: 'First Response',
+    category: 'Emergency & 911', categories: ['Medical & Clinics'], subcategory: 'First Response',
     imageUrl: 'https://picsum.photos/seed/w034/400/300', audioHumanUrl: '',
     linguisticType: 'cognate', testFrequency: 'high', tags: ['911', 'medical'],
+    extraExamples: [
+      { en: 'The ambulance arrived within five minutes.', pt: 'A ambulância chegou em cinco minutos.' },
+      { en: 'Paramedics took her to the hospital in an ambulance.', pt: 'Os paramédicos a levaram ao hospital de ambulância.' },
+    ],
   },
   {
     id: 'w035', word: 'dispatcher', translation: 'operador / atendente',
@@ -342,9 +361,12 @@ export const WORDS: Word[] = [
     id: 'w042', word: 'overdose', translation: 'overdose / superdosagem',
     definition: 'An excessive and dangerous dose of a drug.',
     exampleEN: 'He may have taken an overdose.', examplePT: 'Ele pode ter tomado uma overdose.',
-    category: 'Emergency & 911', subcategory: 'Medical',
+    category: 'Emergency & 911', categories: ['Medical & Clinics'], subcategory: 'Medical',
     imageUrl: 'https://picsum.photos/seed/w042/400/300', audioHumanUrl: '',
     linguisticType: 'cognate', testFrequency: 'medium', tags: ['911', 'medical'],
+    extraExamples: [
+      { en: 'An overdose can be life-threatening.', pt: 'Uma overdose pode ser fatal.' },
+    ],
   },
 
   // ---------------- Insurance ----------------
@@ -368,9 +390,13 @@ export const WORDS: Word[] = [
     id: 'w045', word: 'claim', translation: 'sinistro / solicitação',
     definition: 'A request for payment under an insurance policy.',
     exampleEN: 'I want to file a claim.', examplePT: 'Quero abrir um sinistro.',
-    category: 'Insurance', subcategory: 'Process',
+    category: 'Insurance', categories: ['Customer Service'], subcategory: 'Process',
     imageUrl: 'https://picsum.photos/seed/w045/400/300', audioHumanUrl: '',
     linguisticType: 'false-cognate', testFrequency: 'high', tags: ['insurance'],
+    extraExamples: [
+      { en: 'Your claim is being processed.', pt: 'Seu sinistro está sendo processado.' },
+      { en: 'How long does a claim usually take?', pt: 'Quanto tempo costuma levar um sinistro?' },
+    ],
   },
   {
     id: 'w046', word: 'coverage', translation: 'cobertura',
