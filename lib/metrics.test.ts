@@ -37,3 +37,43 @@ describe('studentMetrics', () => {
     expect(m.percent).toBe(0)
   })
 })
+
+describe('studentMetrics — category fixation', () => {
+  const catWords = [
+    { id: 'a', category: 'Banking' },
+    { id: 'b', category: 'Banking' },
+    { id: 'c', category: 'Medical', categories: ['Banking'] },
+    { id: 'd', category: 'Medical' },
+    { id: 'e', category: 'Basics' },
+  ] as Word[]
+  const prog: Record<string, StudentProgress> = {
+    a: { wordId: 'a', stars: 5, lastReviewed: '', reviewCount: 1 },
+    b: { wordId: 'b', stars: 4, lastReviewed: '', reviewCount: 1 },
+    c: { wordId: 'c', stars: 2, lastReviewed: '', reviewCount: 1 },
+    d: { wordId: 'd', stars: 1, lastReviewed: '', reviewCount: 1 },
+    e: { wordId: 'e', stars: 3, lastReviewed: '', reviewCount: 1 },
+  }
+
+  it('ranks categories by # of 4★+ words (desc)', () => {
+    const m = studentMetrics(catWords, prog)
+    expect(m.highFixationCategories).toEqual([{ category: 'Banking', count: 2 }])
+  })
+
+  it('ranks categories by # of ≤2★ words, counting a word in each of its categories', () => {
+    const m = studentMetrics(catWords, prog)
+    // c (2★) is Medical+Banking, d (1★) is Medical → Medical:2, Banking:1
+    expect(m.lowFixationCategories).toEqual([
+      { category: 'Medical', count: 2 },
+      { category: 'Banking', count: 1 },
+    ])
+  })
+
+  it('omits categories with no words in the bucket and ignores 3★ (neutral)', () => {
+    const m = studentMetrics(catWords, prog)
+    const highCats = m.highFixationCategories.map((c) => c.category)
+    const lowCats = m.lowFixationCategories.map((c) => c.category)
+    expect(highCats).not.toContain('Medical')
+    expect(highCats).not.toContain('Basics') // only 3★, neutral
+    expect(lowCats).not.toContain('Basics')
+  })
+})
