@@ -11,6 +11,8 @@ export interface Word {
   word: string
   translation: string
   definition: string
+  /** Portuguese translation of `definition`, shown in the expanded card. */
+  definitionPT: string
   exampleEN: string
   examplePT: string
   /** Primary category (used as the main display label). */

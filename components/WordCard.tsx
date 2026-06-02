@@ -36,20 +36,29 @@ export function WordCard({ word }: { word: Word }) {
         aria-expanded={expanded}
         onClick={() => setExpanded((e) => !e)}
         onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
+          // Only toggle from the row itself, not from inner controls (audio buttons).
+          if ((e.key === 'Enter' || e.key === ' ') && e.target === e.currentTarget) {
             e.preventDefault()
             setExpanded((x) => !x)
           }
         }}
         className="flex cursor-pointer items-center gap-4 p-4"
       >
-        {/* Word + translation */}
+        {/* Word + translation + example usage */}
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
             <span className="text-lg font-extrabold text-navy">{word.word}</span>
             <span className="text-sm font-medium text-gray-600">{word.translation}</span>
+            <span className="hidden min-w-0 flex-1 truncate text-sm italic text-gray-400 lg:block">
+              &ldquo;{word.exampleEN}&rdquo;
+            </span>
           </div>
           <p className="mt-0.5 line-clamp-1 text-xs text-gray-400">{word.definition}</p>
+        </div>
+
+        {/* Audio — listen without opening the card */}
+        <div className="shrink-0">
+          <AudioButtons word={word.word} sentence={word.exampleEN} compact />
         </div>
 
         {/* Categories */}
@@ -101,6 +110,7 @@ export function WordCard({ word }: { word: Word }) {
                   DEFINITION
                 </div>
                 <p className="text-sm text-gray-700">{word.definition}</p>
+                <p className="mt-1 text-sm italic text-gray-500">{word.definitionPT}</p>
                 <div className="mt-2 flex flex-wrap items-center gap-2">
                   <Badge tone="green">{typeLabel[word.linguisticType]}</Badge>
                   <Badge tone="gray">{word.subcategory}</Badge>

@@ -5,6 +5,7 @@ export const WORDS: Word[] = [
   {
     id: 'w001', word: 'appointment', translation: 'compromisso / consulta',
     definition: 'A scheduled arrangement to meet someone at a particular time.',
+    definitionPT: 'Um compromisso marcado para encontrar alguém em um horário específico.',
     exampleEN: 'I have an appointment at three.', examplePT: 'Tenho um compromisso às três.',
     category: 'Basics', subcategory: 'Scheduling',
     imageUrl: 'https://picsum.photos/seed/w001/400/300', audioHumanUrl: '',
@@ -13,6 +14,7 @@ export const WORDS: Word[] = [
   {
     id: 'w002', word: 'deadline', translation: 'prazo',
     definition: 'The latest time by which something must be completed.',
+    definitionPT: 'O prazo final até o qual algo precisa ser concluído.',
     exampleEN: 'The deadline is tomorrow.', examplePT: 'O prazo é amanhã.',
     category: 'Basics', subcategory: 'Scheduling',
     imageUrl: 'https://picsum.photos/seed/w002/400/300', audioHumanUrl: '',
@@ -21,6 +23,7 @@ export const WORDS: Word[] = [
   {
     id: 'w003', word: 'available', translation: 'disponível',
     definition: 'Able to be used or free to do something.',
+    definitionPT: 'Que está livre ou pode ser usado para fazer algo.',
     exampleEN: 'Are you available on Monday?', examplePT: 'Você está disponível na segunda?',
     category: 'Basics', subcategory: 'Common',
     imageUrl: 'https://picsum.photos/seed/w003/400/300', audioHumanUrl: '',
@@ -29,6 +32,7 @@ export const WORDS: Word[] = [
   {
     id: 'w004', word: 'schedule', translation: 'agenda / agendar',
     definition: 'A plan of activities with the times they will happen.',
+    definitionPT: 'Um plano de atividades com os horários em que elas vão acontecer.',
     exampleEN: 'Let me check my schedule.', examplePT: 'Deixe-me verificar minha agenda.',
     category: 'Basics', subcategory: 'Scheduling',
     imageUrl: 'https://picsum.photos/seed/w004/400/300', audioHumanUrl: '',
@@ -37,6 +41,7 @@ export const WORDS: Word[] = [
   {
     id: 'w005', word: 'agreement', translation: 'acordo',
     definition: 'An arrangement accepted by all parties involved.',
+    definitionPT: 'Um acordo aceito por todas as partes envolvidas.',
     exampleEN: 'We reached an agreement.', examplePT: 'Chegamos a um acordo.',
     category: 'Basics', subcategory: 'Common',
     imageUrl: 'https://picsum.photos/seed/w005/400/300', audioHumanUrl: '',
@@ -45,6 +50,7 @@ export const WORDS: Word[] = [
   {
     id: 'w006', word: 'request', translation: 'solicitação / solicitar',
     definition: 'An act of asking for something formally.',
+    definitionPT: 'O ato de pedir algo formalmente.',
     exampleEN: 'I would like to make a request.', examplePT: 'Eu gostaria de fazer uma solicitação.',
     category: 'Basics', subcategory: 'Common',
     imageUrl: 'https://picsum.photos/seed/w006/400/300', audioHumanUrl: '',
@@ -53,6 +59,7 @@ export const WORDS: Word[] = [
   {
     id: 'w007', word: 'statement', translation: 'declaração',
     definition: 'A definite or clear expression of something.',
+    definitionPT: 'Uma expressão clara e definida de algo.',
     exampleEN: 'Please confirm this statement.', examplePT: 'Por favor, confirme esta declaração.',
     category: 'Basics', subcategory: 'Common',
     imageUrl: 'https://picsum.photos/seed/w007/400/300', audioHumanUrl: '',
@@ -61,6 +68,7 @@ export const WORDS: Word[] = [
   {
     id: 'w008', word: 'confirm', translation: 'confirmar',
     definition: 'To state with assurance that something is true.',
+    definitionPT: 'Afirmar com segurança que algo é verdadeiro.',
     exampleEN: 'Can you confirm your address?', examplePT: 'Você pode confirmar seu endereço?',
     category: 'Basics', categories: ['Customer Service', 'Banking'], subcategory: 'Common',
     imageUrl: 'https://picsum.photos/seed/w008/400/300', audioHumanUrl: '',
@@ -75,6 +83,7 @@ export const WORDS: Word[] = [
   {
     id: 'w009', word: 'prescription', translation: 'receita médica',
     definition: 'An instruction written by a doctor for medicine.',
+    definitionPT: 'Uma instrução escrita por um médico para um medicamento.',
     exampleEN: 'You need a prescription for this.', examplePT: 'Você precisa de uma receita para isso.',
     category: 'Medical & Clinics', categories: ['Insurance'], subcategory: 'Pharmacy',
     imageUrl: 'https://picsum.photos/seed/w009/400/300', audioHumanUrl: '',
@@ -87,6 +96,7 @@ export const WORDS: Word[] = [
   {
     id: 'w010', word: 'symptom', translation: 'sintoma',
     definition: 'A sign that indicates the presence of an illness.',
+    definitionPT: 'Um sinal que indica a presença de uma doença.',
     exampleEN: 'What symptoms do you have?', examplePT: 'Quais sintomas você tem?',
     category: 'Medical & Clinics', subcategory: 'Diagnosis',
     imageUrl: 'https://picsum.photos/seed/w010/400/300', audioHumanUrl: '',
@@ -95,6 +105,7 @@ export const WORDS: Word[] = [
   {
     id: 'w011', word: 'diagnosis', translation: 'diagnóstico',
     definition: 'Identification of an illness by its signs and symptoms.',
+    definitionPT: 'A identificação de uma doença por seus sinais e sintomas.',
     exampleEN: 'The diagnosis was confirmed.', examplePT: 'O diagnóstico foi confirmado.',
     category: 'Medical & Clinics', subcategory: 'Diagnosis',
     imageUrl: 'https://picsum.photos/seed/w011/400/300', audioHumanUrl: '',
@@ -103,6 +114,7 @@ export const WORDS: Word[] = [
   {
     id: 'w012', word: 'dosage', translation: 'dosagem',
     definition: 'The amount of a medicine to be taken at one time.',
+    definitionPT: 'A quantidade de um medicamento a ser tomada de uma vez.',
     exampleEN: 'Follow the recommended dosage.', examplePT: 'Siga a dosagem recomendada.',
     category: 'Medical & Clinics', subcategory: 'Pharmacy',
     imageUrl: 'https://picsum.photos/seed/w012/400/300', audioHumanUrl: '',
@@ -111,6 +123,7 @@ export const WORDS: Word[] = [
   {
     id: 'w013', word: 'swelling', translation: 'inchaço',
     definition: 'An abnormal enlargement of a part of the body.',
+    definitionPT: 'Um aumento anormal de uma parte do corpo.',
     exampleEN: 'There is swelling in her leg.', examplePT: 'Há inchaço na perna dela.',
     category: 'Medical & Clinics', subcategory: 'Symptoms',
     imageUrl: 'https://picsum.photos/seed/w013/400/300', audioHumanUrl: '',
@@ -119,6 +132,7 @@ export const WORDS: Word[] = [
   {
     id: 'w014', word: 'rash', translation: 'erupção cutânea',
     definition: 'An area of red, irritated skin.',
+    definitionPT: 'Uma área de pele vermelha e irritada.',
     exampleEN: 'He developed a rash on his arm.', examplePT: 'Ele teve uma erupção no braço.',
     category: 'Medical & Clinics', subcategory: 'Symptoms',
     imageUrl: 'https://picsum.photos/seed/w014/400/300', audioHumanUrl: '',
@@ -127,6 +141,7 @@ export const WORDS: Word[] = [
   {
     id: 'w015', word: 'dizziness', translation: 'tontura',
     definition: 'A sensation of spinning and losing balance.',
+    definitionPT: 'Uma sensação de girar e perder o equilíbrio.',
     exampleEN: 'She complained of dizziness.', examplePT: 'Ela reclamou de tontura.',
     category: 'Medical & Clinics', subcategory: 'Symptoms',
     imageUrl: 'https://picsum.photos/seed/w015/400/300', audioHumanUrl: '',
@@ -135,6 +150,7 @@ export const WORDS: Word[] = [
   {
     id: 'w016', word: 'pregnancy', translation: 'gravidez',
     definition: 'The condition of carrying a developing baby.',
+    definitionPT: 'A condição de carregar um bebê em desenvolvimento.',
     exampleEN: 'This is her first pregnancy.', examplePT: 'Esta é a primeira gravidez dela.',
     category: 'Medical & Clinics', subcategory: 'General',
     imageUrl: 'https://picsum.photos/seed/w016/400/300', audioHumanUrl: '',
@@ -143,6 +159,7 @@ export const WORDS: Word[] = [
   {
     id: 'w017', word: 'referral', translation: 'encaminhamento',
     definition: 'The act of sending a patient to a specialist.',
+    definitionPT: 'O ato de encaminhar um paciente a um especialista.',
     exampleEN: 'You need a referral to a specialist.', examplePT: 'Você precisa de um encaminhamento a um especialista.',
     category: 'Medical & Clinics', subcategory: 'General',
     imageUrl: 'https://picsum.photos/seed/w017/400/300', audioHumanUrl: '',
@@ -153,6 +170,7 @@ export const WORDS: Word[] = [
   {
     id: 'w018', word: 'complaint', translation: 'reclamação',
     definition: 'A statement that something is unsatisfactory.',
+    definitionPT: 'Uma declaração de que algo está insatisfatório.',
     exampleEN: 'I would like to file a complaint.', examplePT: 'Eu gostaria de registrar uma reclamação.',
     category: 'Customer Service', subcategory: 'Support',
     imageUrl: 'https://picsum.photos/seed/w018/400/300', audioHumanUrl: '',
@@ -161,6 +179,7 @@ export const WORDS: Word[] = [
   {
     id: 'w019', word: 'refund', translation: 'reembolso',
     definition: 'A repayment of a sum of money.',
+    definitionPT: 'A devolução de uma quantia em dinheiro.',
     exampleEN: 'Can I get a refund?', examplePT: 'Posso receber um reembolso?',
     category: 'Customer Service', subcategory: 'Billing',
     imageUrl: 'https://picsum.photos/seed/w019/400/300', audioHumanUrl: '',
@@ -169,6 +188,7 @@ export const WORDS: Word[] = [
   {
     id: 'w020', word: 'inquiry', translation: 'consulta / dúvida',
     definition: 'An act of asking for information.',
+    definitionPT: 'O ato de pedir informações.',
     exampleEN: 'Thank you for your inquiry.', examplePT: 'Obrigado pela sua consulta.',
     category: 'Customer Service', subcategory: 'Support',
     imageUrl: 'https://picsum.photos/seed/w020/400/300', audioHumanUrl: '',
@@ -177,6 +197,7 @@ export const WORDS: Word[] = [
   {
     id: 'w021', word: 'feedback', translation: 'retorno / opinião',
     definition: 'Information about reactions used as a basis for improvement.',
+    definitionPT: 'Informações sobre reações usadas como base para melhorias.',
     exampleEN: 'We value your feedback.', examplePT: 'Valorizamos o seu retorno.',
     category: 'Customer Service', subcategory: 'Support',
     imageUrl: 'https://picsum.photos/seed/w021/400/300', audioHumanUrl: '',
@@ -185,6 +206,7 @@ export const WORDS: Word[] = [
   {
     id: 'w022', word: 'account', translation: 'conta',
     definition: 'A record or arrangement with a company or bank.',
+    definitionPT: 'Um registro ou cadastro com uma empresa ou banco.',
     exampleEN: 'Please log in to your account.', examplePT: 'Por favor, acesse sua conta.',
     category: 'Customer Service', categories: ['Banking'], subcategory: 'Support',
     imageUrl: 'https://picsum.photos/seed/w022/400/300', audioHumanUrl: '',
@@ -197,6 +219,7 @@ export const WORDS: Word[] = [
   {
     id: 'w023', word: 'invoice', translation: 'fatura',
     definition: 'A list of goods or services with their prices.',
+    definitionPT: 'Uma lista de produtos ou serviços com seus preços.',
     exampleEN: 'I will send you the invoice.', examplePT: 'Vou lhe enviar a fatura.',
     category: 'Customer Service', categories: ['Banking'], subcategory: 'Billing',
     imageUrl: 'https://picsum.photos/seed/w023/400/300', audioHumanUrl: '',
@@ -208,6 +231,7 @@ export const WORDS: Word[] = [
   {
     id: 'w024', word: 'follow-up', translation: 'acompanhamento',
     definition: 'A subsequent action to check on progress.',
+    definitionPT: 'Uma ação posterior para verificar o andamento.',
     exampleEN: 'We will schedule a follow-up.', examplePT: 'Vamos agendar um acompanhamento.',
     category: 'Customer Service', subcategory: 'Support',
     imageUrl: 'https://picsum.photos/seed/w024/400/300', audioHumanUrl: '',
@@ -216,6 +240,7 @@ export const WORDS: Word[] = [
   {
     id: 'w025', word: 'escalate', translation: 'escalar / encaminhar',
     definition: 'To pass an issue to a higher level of authority.',
+    definitionPT: 'Encaminhar um problema a um nível superior de autoridade.',
     exampleEN: 'I will escalate this issue.', examplePT: 'Vou encaminhar este problema a um superior.',
     category: 'Customer Service', subcategory: 'Support',
     imageUrl: 'https://picsum.photos/seed/w025/400/300', audioHumanUrl: '',
@@ -226,6 +251,7 @@ export const WORDS: Word[] = [
   {
     id: 'w026', word: 'overdraft', translation: 'cheque especial',
     definition: 'A deficit in a bank account from withdrawing too much.',
+    definitionPT: 'Um saldo negativo na conta bancária por sacar além do disponível.',
     exampleEN: 'You have an overdraft on your account.', examplePT: 'Você está usando o cheque especial da sua conta.',
     category: 'Banking', subcategory: 'Accounts',
     imageUrl: 'https://picsum.photos/seed/w026/400/300', audioHumanUrl: '',
@@ -234,6 +260,7 @@ export const WORDS: Word[] = [
   {
     id: 'w027', word: 'deposit', translation: 'depósito',
     definition: 'A sum of money placed in a bank account.',
+    definitionPT: 'Uma quantia em dinheiro colocada em uma conta bancária.',
     exampleEN: 'I want to make a deposit.', examplePT: 'Quero fazer um depósito.',
     category: 'Banking', subcategory: 'Transactions',
     imageUrl: 'https://picsum.photos/seed/w027/400/300', audioHumanUrl: '',
@@ -242,6 +269,7 @@ export const WORDS: Word[] = [
   {
     id: 'w028', word: 'withdrawal', translation: 'saque',
     definition: 'The action of taking money out of an account.',
+    definitionPT: 'O ato de retirar dinheiro de uma conta.',
     exampleEN: 'There was a large withdrawal.', examplePT: 'Houve um saque de valor alto.',
     category: 'Banking', subcategory: 'Transactions',
     imageUrl: 'https://picsum.photos/seed/w028/400/300', audioHumanUrl: '',
@@ -250,6 +278,7 @@ export const WORDS: Word[] = [
   {
     id: 'w029', word: 'balance', translation: 'saldo',
     definition: 'The amount of money in an account.',
+    definitionPT: 'A quantia de dinheiro disponível em uma conta.',
     exampleEN: 'Let me check your balance.', examplePT: 'Deixe-me verificar seu saldo.',
     category: 'Banking', subcategory: 'Accounts',
     imageUrl: 'https://picsum.photos/seed/w029/400/300', audioHumanUrl: '',
@@ -258,6 +287,7 @@ export const WORDS: Word[] = [
   {
     id: 'w030', word: 'loan', translation: 'empréstimo',
     definition: 'A sum of money that is borrowed and expected to be paid back.',
+    definitionPT: 'Uma quantia em dinheiro emprestada que se espera que seja devolvida.',
     exampleEN: 'She applied for a loan.', examplePT: 'Ela solicitou um empréstimo.',
     category: 'Banking', subcategory: 'Credit',
     imageUrl: 'https://picsum.photos/seed/w030/400/300', audioHumanUrl: '',
@@ -266,6 +296,7 @@ export const WORDS: Word[] = [
   {
     id: 'w031', word: 'interest', translation: 'juros',
     definition: 'Money paid for the use of borrowed money.',
+    definitionPT: 'Dinheiro pago pelo uso de um valor emprestado.',
     exampleEN: 'The interest rate is high.', examplePT: 'A taxa de juros está alta.',
     category: 'Banking', subcategory: 'Credit',
     imageUrl: 'https://picsum.photos/seed/w031/400/300', audioHumanUrl: '',
@@ -274,6 +305,7 @@ export const WORDS: Word[] = [
   {
     id: 'w032', word: 'mortgage', translation: 'hipoteca / financiamento',
     definition: 'A loan used to buy property, secured against it.',
+    definitionPT: 'Um empréstimo usado para comprar um imóvel, tendo o próprio imóvel como garantia.',
     exampleEN: 'They took out a mortgage.', examplePT: 'Eles fizeram um financiamento imobiliário.',
     category: 'Banking', subcategory: 'Credit',
     imageUrl: 'https://picsum.photos/seed/w032/400/300', audioHumanUrl: '',
@@ -282,6 +314,7 @@ export const WORDS: Word[] = [
   {
     id: 'w033', word: 'transfer', translation: 'transferência',
     definition: 'The movement of money from one account to another.',
+    definitionPT: 'A movimentação de dinheiro de uma conta para outra.',
     exampleEN: 'I made a transfer this morning.', examplePT: 'Fiz uma transferência hoje de manhã.',
     category: 'Banking', subcategory: 'Transactions',
     imageUrl: 'https://picsum.photos/seed/w033/400/300', audioHumanUrl: '',
@@ -292,6 +325,7 @@ export const WORDS: Word[] = [
   {
     id: 'w034', word: 'ambulance', translation: 'ambulância',
     definition: 'Emergency vehicle used to transport patients to a hospital.',
+    definitionPT: 'Veículo de emergência usado para transportar pacientes a um hospital.',
     exampleEN: 'Call an ambulance immediately.', examplePT: 'Chame uma ambulância imediatamente.',
     category: 'Emergency & 911', categories: ['Medical & Clinics'], subcategory: 'First Response',
     imageUrl: 'https://picsum.photos/seed/w034/400/300', audioHumanUrl: '',
@@ -304,6 +338,7 @@ export const WORDS: Word[] = [
   {
     id: 'w035', word: 'dispatcher', translation: 'operador / atendente',
     definition: 'A person who receives and coordinates emergency calls.',
+    definitionPT: 'Uma pessoa que recebe e coordena chamadas de emergência.',
     exampleEN: 'The dispatcher is sending help.', examplePT: 'O atendente está enviando ajuda.',
     category: 'Emergency & 911', subcategory: 'First Response',
     imageUrl: 'https://picsum.photos/seed/w035/400/300', audioHumanUrl: '',
@@ -312,6 +347,7 @@ export const WORDS: Word[] = [
   {
     id: 'w036', word: 'bleeding', translation: 'sangramento',
     definition: 'The loss of blood from the body.',
+    definitionPT: 'A perda de sangue pelo corpo.',
     exampleEN: 'Is the bleeding severe?', examplePT: 'O sangramento é intenso?',
     category: 'Emergency & 911', subcategory: 'Medical',
     imageUrl: 'https://picsum.photos/seed/w036/400/300', audioHumanUrl: '',
@@ -320,6 +356,7 @@ export const WORDS: Word[] = [
   {
     id: 'w037', word: 'unconscious', translation: 'inconsciente / desacordado',
     definition: 'Not awake and not aware of surroundings.',
+    definitionPT: 'Que não está acordado nem consciente do que está ao redor.',
     exampleEN: 'He is unconscious but breathing.', examplePT: 'Ele está inconsciente, mas respirando.',
     category: 'Emergency & 911', subcategory: 'Medical',
     imageUrl: 'https://picsum.photos/seed/w037/400/300', audioHumanUrl: '',
@@ -328,6 +365,7 @@ export const WORDS: Word[] = [
   {
     id: 'w038', word: 'choking', translation: 'engasgo / asfixia',
     definition: 'Being unable to breathe due to a blocked airway.',
+    definitionPT: 'A incapacidade de respirar devido a uma via aérea bloqueada.',
     exampleEN: 'The child is choking.', examplePT: 'A criança está engasgando.',
     category: 'Emergency & 911', subcategory: 'Medical',
     imageUrl: 'https://picsum.photos/seed/w038/400/300', audioHumanUrl: '',
@@ -336,6 +374,7 @@ export const WORDS: Word[] = [
   {
     id: 'w039', word: 'seizure', translation: 'convulsão',
     definition: 'A sudden burst of uncontrolled electrical activity in the brain.',
+    definitionPT: 'Uma explosão repentina de atividade elétrica descontrolada no cérebro.',
     exampleEN: 'She is having a seizure.', examplePT: 'Ela está tendo uma convulsão.',
     category: 'Emergency & 911', subcategory: 'Medical',
     imageUrl: 'https://picsum.photos/seed/w039/400/300', audioHumanUrl: '',
@@ -344,6 +383,7 @@ export const WORDS: Word[] = [
   {
     id: 'w040', word: 'fire', translation: 'incêndio / fogo',
     definition: 'The state of burning that produces flames and heat.',
+    definitionPT: 'O estado de combustão que produz chamas e calor.',
     exampleEN: 'There is a fire in the building.', examplePT: 'Há um incêndio no prédio.',
     category: 'Emergency & 911', subcategory: 'Safety',
     imageUrl: 'https://picsum.photos/seed/w040/400/300', audioHumanUrl: '',
@@ -352,6 +392,7 @@ export const WORDS: Word[] = [
   {
     id: 'w041', word: 'intruder', translation: 'invasor',
     definition: 'A person who enters a place without permission.',
+    definitionPT: 'Uma pessoa que entra em um lugar sem permissão.',
     exampleEN: 'There is an intruder in my house.', examplePT: 'Há um invasor na minha casa.',
     category: 'Emergency & 911', subcategory: 'Safety',
     imageUrl: 'https://picsum.photos/seed/w041/400/300', audioHumanUrl: '',
@@ -360,6 +401,7 @@ export const WORDS: Word[] = [
   {
     id: 'w042', word: 'overdose', translation: 'overdose / superdosagem',
     definition: 'An excessive and dangerous dose of a drug.',
+    definitionPT: 'Uma dose excessiva e perigosa de uma droga ou medicamento.',
     exampleEN: 'He may have taken an overdose.', examplePT: 'Ele pode ter tomado uma overdose.',
     category: 'Emergency & 911', categories: ['Medical & Clinics'], subcategory: 'Medical',
     imageUrl: 'https://picsum.photos/seed/w042/400/300', audioHumanUrl: '',
@@ -373,6 +415,7 @@ export const WORDS: Word[] = [
   {
     id: 'w043', word: 'deductible', translation: 'franquia',
     definition: 'The amount you pay before insurance starts to cover costs.',
+    definitionPT: 'O valor que você paga antes de o seguro começar a cobrir os custos.',
     exampleEN: 'Your deductible is five hundred dollars.', examplePT: 'Sua franquia é de quinhentos dólares.',
     category: 'Insurance', subcategory: 'Policy',
     imageUrl: 'https://picsum.photos/seed/w043/400/300', audioHumanUrl: '',
@@ -381,6 +424,7 @@ export const WORDS: Word[] = [
   {
     id: 'w044', word: 'premium', translation: 'prêmio / valor da apólice',
     definition: 'The amount paid periodically for an insurance policy.',
+    definitionPT: 'O valor pago periodicamente por uma apólice de seguro.',
     exampleEN: 'Your monthly premium increased.', examplePT: 'O valor mensal da sua apólice aumentou.',
     category: 'Insurance', subcategory: 'Policy',
     imageUrl: 'https://picsum.photos/seed/w044/400/300', audioHumanUrl: '',
@@ -389,6 +433,7 @@ export const WORDS: Word[] = [
   {
     id: 'w045', word: 'claim', translation: 'sinistro / solicitação',
     definition: 'A request for payment under an insurance policy.',
+    definitionPT: 'Um pedido de pagamento com base em uma apólice de seguro.',
     exampleEN: 'I want to file a claim.', examplePT: 'Quero abrir um sinistro.',
     category: 'Insurance', categories: ['Customer Service'], subcategory: 'Process',
     imageUrl: 'https://picsum.photos/seed/w045/400/300', audioHumanUrl: '',
@@ -401,6 +446,7 @@ export const WORDS: Word[] = [
   {
     id: 'w046', word: 'coverage', translation: 'cobertura',
     definition: 'The extent of protection provided by insurance.',
+    definitionPT: 'A extensão da proteção oferecida por um seguro.',
     exampleEN: 'Does my coverage include this?', examplePT: 'Minha cobertura inclui isso?',
     category: 'Insurance', subcategory: 'Policy',
     imageUrl: 'https://picsum.photos/seed/w046/400/300', audioHumanUrl: '',
@@ -409,6 +455,7 @@ export const WORDS: Word[] = [
   {
     id: 'w047', word: 'policy', translation: 'apólice',
     definition: 'A contract of insurance.',
+    definitionPT: 'Um contrato de seguro.',
     exampleEN: 'Please read your policy carefully.', examplePT: 'Por favor, leia sua apólice com atenção.',
     category: 'Insurance', subcategory: 'Policy',
     imageUrl: 'https://picsum.photos/seed/w047/400/300', audioHumanUrl: '',
@@ -417,6 +464,7 @@ export const WORDS: Word[] = [
   {
     id: 'w048', word: 'waiver', translation: 'renúncia / isenção',
     definition: 'A document giving up a right or claim.',
+    definitionPT: 'Um documento que abre mão de um direito ou reivindicação.',
     exampleEN: 'You must sign a waiver.', examplePT: 'Você precisa assinar um termo de isenção.',
     category: 'Insurance', subcategory: 'Process',
     imageUrl: 'https://picsum.photos/seed/w048/400/300', audioHumanUrl: '',
@@ -425,6 +473,7 @@ export const WORDS: Word[] = [
   {
     id: 'w049', word: 'beneficiary', translation: 'beneficiário',
     definition: 'A person who receives benefits from a policy.',
+    definitionPT: 'Uma pessoa que recebe os benefícios de uma apólice.',
     exampleEN: 'Who is the beneficiary?', examplePT: 'Quem é o beneficiário?',
     category: 'Insurance', subcategory: 'Policy',
     imageUrl: 'https://picsum.photos/seed/w049/400/300', audioHumanUrl: '',
@@ -433,6 +482,7 @@ export const WORDS: Word[] = [
   {
     id: 'w050', word: 'liability', translation: 'responsabilidade civil',
     definition: 'Legal responsibility for something, especially costs.',
+    definitionPT: 'Responsabilidade legal por algo, especialmente por custos.',
     exampleEN: 'The policy covers liability.', examplePT: 'A apólice cobre responsabilidade civil.',
     category: 'Insurance', subcategory: 'Policy',
     imageUrl: 'https://picsum.photos/seed/w050/400/300', audioHumanUrl: '',

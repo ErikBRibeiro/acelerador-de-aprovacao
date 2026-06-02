@@ -5,11 +5,45 @@ export function AudioButtons({
   word,
   sentence,
   humanUrl,
+  compact = false,
 }: {
   word: string
   sentence?: string
   humanUrl?: string
+  /** Icon-only variant (word + sentence) for the collapsed word row. */
+  compact?: boolean
 }) {
+  if (compact) {
+    return (
+      <div className="flex items-center gap-0.5">
+        <button
+          onClick={(e) => {
+            e.stopPropagation()
+            speak(word)
+          }}
+          title="Ouvir palavra"
+          aria-label="Ouvir palavra"
+          className="rounded-md px-2 py-1 text-sm leading-none text-navy hover:bg-blue-50"
+        >
+          🔊
+        </button>
+        {sentence && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              speak(sentence)
+            }}
+            title="Ouvir frase de exemplo"
+            aria-label="Ouvir frase de exemplo"
+            className="rounded-md px-2 py-1 text-sm leading-none text-navy hover:bg-blue-50"
+          >
+            💬
+          </button>
+        )}
+      </div>
+    )
+  }
+
   return (
     <div className="flex flex-wrap items-center gap-2">
       <button

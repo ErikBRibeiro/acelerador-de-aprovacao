@@ -14,8 +14,8 @@ export default function Study() {
 
   const filtered = WORDS.filter((w) => {
     const wCats = wordCategories(w)
-    // OR across selected categories: include a word if it matches ANY selected filter
-    const catMatch = cats.length === 0 || cats.some((c) => wCats.includes(c))
+    // AND across selected categories: include a word only if it matches ALL selected filters
+    const catMatch = cats.length === 0 || cats.every((c) => wCats.includes(c))
     const text = `${w.word} ${w.translation}`.toLowerCase()
     const qMatch = q === '' || text.includes(q.toLowerCase())
     return catMatch && qMatch

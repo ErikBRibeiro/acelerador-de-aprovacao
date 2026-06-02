@@ -4,8 +4,12 @@
 # Local scratch
 build.log
 dev.log
+redeploy.log
+gitconnect.log
+deploy.log
 *.png
 .playwright-mcp/
+.claude/scheduled_tasks.lock
 
 # Dependencies
 node_modules/
@@ -16,6 +20,7 @@ node_modules/
 /.next/
 /out/
 /build
+/.swc
 next-env.d.ts
 
 # Production

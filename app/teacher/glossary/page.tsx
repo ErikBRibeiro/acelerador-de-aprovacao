@@ -17,7 +17,8 @@ export default function Glossary() {
 
   const filtered = WORDS.filter((w) => {
     const wCats = wordCategories(w)
-    const catMatch = cats.length === 0 || cats.some((c) => wCats.includes(c))
+    // AND across selected categories: include a word only if it matches ALL selected filters
+    const catMatch = cats.length === 0 || cats.every((c) => wCats.includes(c))
     const freqMatch = freq === 'All' || w.testFrequency === freq
     const typeMatch = type === 'All' || w.linguisticType === type
     const text = [w.word, w.translation, ...w.tags].join(' ').toLowerCase()
